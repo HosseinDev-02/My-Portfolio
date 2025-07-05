@@ -1,26 +1,34 @@
 @import "tailwindcss";
+@import "../styles/fonts.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@utility container {
+  margin-inline: auto;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-background: #1A1A1D;
+  --color-caption: #EEEEEE;
+  --color-primary: #537FE7;
+  --color-section: #191919;
+  --color-box: #212121;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Breakpoints */
+  --breakpoint-*: initial;
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 80rem;
+
+  /* Fonts */
+
+  --font-IransansWeb-Black: 'IransansWeb Black';
+  --font-IransansWeb-Bold: 'IransansWeb Bold';
+  --font-IransansWeb-Medium: 'IransansWeb Medium';
+  --font-IransansWeb-UltraLight: 'IransansWeb UltraLight';
+  --font-IransansWeb: 'IransansWeb';
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-caption font-IransansWeb
 }
