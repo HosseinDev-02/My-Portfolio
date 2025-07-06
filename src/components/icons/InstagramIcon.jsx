@@ -1,5 +1,5 @@
+'use client'
 import React from "react";
-
 function InstagramIcon({ width, height, color }) {
     return (
         <svg

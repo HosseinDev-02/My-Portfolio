@@ -3,6 +3,11 @@
 
 @utility container {
   margin-inline: auto;
+  padding-inline: 1rem;
+
+  @media screen and(min-width: 768px) {
+    padding-inline: 1.5rem;
+  }
 }
 
 @theme {
@@ -27,8 +32,17 @@
   --font-IransansWeb-Medium: 'IransansWeb Medium';
   --font-IransansWeb-UltraLight: 'IransansWeb UltraLight';
   --font-IransansWeb: 'IransansWeb';
+  --font-HerrVonMuellerhoff-Regular: 'HerrVonMuellerhoff Regular';
+
+  /* Shadow */
+
+  --shadow-section-top: 0 -2px 6px 1px rgba(22, 22, 22, 0.8);
+  --shadow-section-middle: 0 0 6px 1px rgba(22, 22, 22, 0.8);
 }
 
 body {
   @apply bg-background text-caption font-IransansWeb
 }
+
+
+/* Responsive */

@@ -23,3 +23,8 @@
     src: url('/fonts/Iransans-Web/IRANSansWeb_FaNum.woff') format('woff');
     font-display: swap;
 }
+@font-face {
+    font-family: 'HerrVonMuellerhoff Regular';
+    src: url('/fonts/HerrVonMuellerhoff-Regular.ttf') format('truetype');
+    font-display: swap;
+}

@@ -5,6 +5,8 @@ import WhatsappIcon from "../icons/WhatsappIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import TelegramIcon from "../icons/TelegramIcon";
+import MenuIcon from "../icons/MenuIcon";
+import LogoIcon from "../icons/LogoIcon";
 
 function Header() {
     const menuLinks = [
@@ -58,20 +60,33 @@ function Header() {
         },
     ];
 
-    const setSocialMediaIcon = linkTitle => (
-        linkTitle.includes('whatsapp') && WhatsappIcon ||
-        linkTitle.includes('linkedin') && LinkedInIcon ||
-        linkTitle.includes('instagram') && InstagramIcon ||
-        linkTitle.includes('telegram') && TelegramIcon
-    )
+    const setSocialMediaIcon = (linkTitle) =>
+        (linkTitle.includes("whatsapp") && WhatsappIcon) ||
+        (linkTitle.includes("linkedin") && LinkedInIcon) ||
+        (linkTitle.includes("instagram") && InstagramIcon) ||
+        (linkTitle.includes("telegram") && TelegramIcon);
 
     return (
-        <header className="fixed left-0 right-0 top-8">
+        <header className="fixed left-0 right-0 top-6 md:top-8">
             <div className="container">
-                <div className="flex items-center justify-between h-20 px-6 bg-section rounded-2xl shadow border-b-2 border-primary/70">
+                <div className="flex items-center justify-between h-20 px-3 lg:px-6 bg-section shadow-section-top rounded-xl border-b-2 border-primary/70">
                     {/* Logo */}
+                    <div className="flex flex-row-reverse sm:flex-row items-center justify-between sm:justify-start gap-2.5 w-full sm:w-auto">
+                        <Link
+                            href="#"
+                            className="block font-HerrVonMuellerhoff-Regular text-4xl relative h-14 w-18"
+                        >
+                            <Image alt="logo" fill src="/images/primary-logo.png" />
+                            {/* <LogoIcon width="72px" height="56px" /> */}
+                        </Link>
+                        <div className="block lg:hidden relative w-7 h-6">
+                            <span className="absolute right-0 top-0 bg-white w-full h-0.5 rounded-xl"></span>
+                            <span className="absolute right-0 top-0 bottom-0 my-auto bg-white w-3/4 h-0.5 rounded-xl"></span>
+                            <span className="absolute right-0 bottom-0 bg-white w-full h-0.5 rounded-xl"></span>
+                        </div>
+                    </div>
                     {/* Menu */}
-                    <ul className="flex items-center gap-3 font-IransansWeb-Medium">
+                    <ul className="hidden lg:flex items-center gap-10 font-IransansWeb-Medium">
                         {menuLinks.map((link) => (
                             <li key={link.id}>
                                 <Link
@@ -84,13 +99,23 @@ function Header() {
                         ))}
                     </ul>
                     {/* Social Media Links */}
-                    <div className="flex items-center gap-2">
+                    <div className="hidden sm:flex items-center gap-2">
                         {socialMediaLinks.map((link) => {
                             const Icon = setSocialMediaIcon(link.title);
 
-                            return <Link className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:bg-caption hover:text-primary" key={link.id} href={link.href}>
-                                <Icon color="currentColor" width={22} height={22}/>
-                            </Link>;
+                            return (
+                                <Link
+                                    className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"
+                                    key={link.id}
+                                    href={link.href}
+                                >
+                                    <Icon
+                                        color="currentColor"
+                                        width={22}
+                                        height={22}
+                                    />
+                                </Link>
+                            );
                         })}
                     </div>
                 </div>
