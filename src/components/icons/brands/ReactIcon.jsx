@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 const ReactIcon = (props) => (
     <svg {...props} viewBox="0 0 128 128">

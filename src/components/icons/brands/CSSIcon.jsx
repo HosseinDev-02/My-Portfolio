@@ -1,3 +1,4 @@
+'use client'
 import * as React from "react";
 const CSSIcon = ({ width, height, color }) => (
     <svg width={width} height={height} viewBox="0 0 128 128">

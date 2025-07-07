@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react";
 const HTMLIcon = ({ width, height, color }) => (
     <svg width={width} height={height} viewBox="0 0 128 128">

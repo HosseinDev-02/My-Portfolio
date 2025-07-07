@@ -1,35 +1,11 @@
 import Header from "@/components/Header/Header";
+import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import SendIcon from "@/components/icons/SendIcon";
-import CSSIcon from "@/components/icons/brands/CSSIcon";
-import GitIcon from "@/components/icons/brands/GitIcon";
-import GithubIcon from "@/components/icons/brands/GithubIcon";
-import HTMLIcon from "@/components/icons/brands/HTMLIcon";
-import JavascriptIcon from "@/components/icons/brands/JavascriptIcon";
-import NextJsIcon from "@/components/icons/brands/NextJsIcon";
-import ReactIcon from "@/components/icons/brands/ReactIcon";
-import ReduxIcon from "@/components/icons/brands/ReduxIcon";
-import TailwindCssIcon from "@/components/icons/brands/TailwindCssIcon";
-import TypescriptIcon from "@/components/icons/brands/TypescriptIcon";
-import IntroShape from "@/components/shapes/IntroShape";
 import { skills } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-
-    const skillIcons = {
-        'Git': GitIcon,
-        'React': ReactIcon,
-        'Redux': ReduxIcon,
-        'Javascript': JavascriptIcon,
-        'CSS': CSSIcon,
-        'HTML': HTMLIcon,
-        'Next Js': NextJsIcon,
-        'Typescript': TypescriptIcon,
-        'Github': GithubIcon, 
-        'TailwindCss': TailwindCssIcon, 
-    }
     return (
         <div className="">
             <Header />
@@ -107,41 +83,9 @@ export default function Home() {
                             {/* Skills Content Wrapper */}
                             <div className="grid grid-cols-3 gap-8">
                                 {/* Skill Item */}
-                                {skills.map((skill) => {
-                                    const Icon = skillIcons[skill.title]
-                                    return (
-                                        <div
-                                            key={skill.id}
-                                            className="basis-1/4 bg-section rounded-xl p-4"
-                                        >
-                                            {/* Statistic */}
-                                            <div className="flex items-center justify-between pb-4">
-                                                {/* Text */}
-                                               {
-                                                Icon &&  <Icon width={30} />
-                                               }
-
-                                                <span className="font-IransansWeb-Bold">
-                                                    {skill.title}
-                                                </span>
-                                                {/* Icon */}
-                                            </div>
-                                            {/* Progress Bar */}
-                                            <div className="w-full h-3 rounded-2xl bg-background flex items-center mt-4">
-                                                <div
-                                                    style={{
-                                                        width: `${skill.percent}%`,
-                                                    }}
-                                                    className="relative bg-primary h-2.5 rounded-2xl"
-                                                >
-                                                    <span className="absolute left-0 font-IransansWeb-Medium text-sm -top-6">
-                                                        {skill.percent}%
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    );
-                                })}
+                                {skills.map((skill) => (
+                                    <SkillItem key={skill.id} {...skill} />
+                                ))}
                             </div>
                         </div>
                     </div>
