@@ -12,10 +12,24 @@ import ReduxIcon from "@/components/icons/brands/ReduxIcon";
 import TailwindCssIcon from "@/components/icons/brands/TailwindCssIcon";
 import TypescriptIcon from "@/components/icons/brands/TypescriptIcon";
 import IntroShape from "@/components/shapes/IntroShape";
+import { skills } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
+    const skillIcons = {
+        'Git': GitIcon,
+        'React': ReactIcon,
+        'Redux': ReduxIcon,
+        'Javascript': JavascriptIcon,
+        'CSS': CSSIcon,
+        'HTML': HTMLIcon,
+        'Next Js': NextJsIcon,
+        'Typescript': TypescriptIcon,
+        'Github': GithubIcon, 
+        'TailwindCss': TailwindCssIcon, 
+    }
     return (
         <div className="">
             <Header />
@@ -86,22 +100,48 @@ export default function Home() {
                         {/* Content */}
                         <div>
                             {/* Section Title */}
-                            <h3 className="text-white font-IransansWeb-Black text-2xl text-center">
+                            <h3 className="text-white font-IransansWeb-Black text-2xl text-center mb-20">
                                 مهارت های{" "}
                                 <span className="text-primary">من</span>
                             </h3>
                             {/* Skills Content Wrapper */}
-                            <div>
-                                <HTMLIcon width={50} height={100}/>
-                                <JavascriptIcon color='var(--color-primary)' width={50} height={100}/>
-                                <CSSIcon width={50} height={100}/>
-                                <NextJsIcon color='var(--color-primary)' width={50} height={100}/>
-                                <ReactIcon width={50} height={100}/>
-                                <GithubIcon width={50} height={100}/>
-                                <GitIcon color='var(--color-primary)' width={50} height={100}/>
-                                <TailwindCssIcon color='var(--color-primary)' width={50} height={100}/>
-                                <TypescriptIcon color='var(--color-primary)' width={50} height={100}/>
-                                <ReduxIcon width={50} height={100}/>
+                            <div className="grid grid-cols-3 gap-8">
+                                {/* Skill Item */}
+                                {skills.map((skill) => {
+                                    const Icon = skillIcons[skill.title]
+                                    return (
+                                        <div
+                                            key={skill.id}
+                                            className="basis-1/4 bg-section rounded-xl p-4"
+                                        >
+                                            {/* Statistic */}
+                                            <div className="flex items-center justify-between pb-4">
+                                                {/* Text */}
+                                               {
+                                                Icon &&  <Icon width={30} />
+                                               }
+
+                                                <span className="font-IransansWeb-Bold">
+                                                    {skill.title}
+                                                </span>
+                                                {/* Icon */}
+                                            </div>
+                                            {/* Progress Bar */}
+                                            <div className="w-full h-3 rounded-2xl bg-background flex items-center mt-4">
+                                                <div
+                                                    style={{
+                                                        width: `${skill.percent}%`,
+                                                    }}
+                                                    className="relative bg-primary h-2.5 rounded-2xl"
+                                                >
+                                                    <span className="absolute left-0 font-IransansWeb-Medium text-sm -top-6">
+                                                        {skill.percent}%
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
