@@ -11,11 +11,11 @@
 }
 
 @theme {
-  --color-background: #1A1A1D;
+  --color-background: #27272b;
   --color-caption: #EEEEEE;
   --color-primary: #537FE7;
-  --color-section: #191919;
-  --color-box: #212121;
+  --color-box: #3a3a41;
+  --color-section: #303036;
 
   /* Breakpoints */
   --breakpoint-*: initial;
@@ -38,6 +38,9 @@
 
   --shadow-section-top: 0 -2px 6px 1px rgba(22, 22, 22, 0.8);
   --shadow-section-middle: 0 0 6px 1px rgba(22, 22, 22, 0.8);
+
+  /* Background Image */
+
 }
 
 body {

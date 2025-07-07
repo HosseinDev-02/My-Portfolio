@@ -67,57 +67,55 @@ function Header() {
         (linkTitle.includes("telegram") && TelegramIcon);
 
     return (
-        <header className="fixed left-0 right-0 top-6 md:top-8">
-            <div className="container">
-                <div className="flex items-center justify-between h-20 px-3 lg:px-6 bg-section shadow-section-top rounded-xl border-b-2 border-primary/70">
-                    {/* Logo */}
-                    <div className="flex flex-row-reverse sm:flex-row items-center justify-between sm:justify-start gap-2.5 w-full sm:w-auto">
-                        <Link
-                            href="#"
-                            className="block font-HerrVonMuellerhoff-Regular text-4xl relative h-14 w-18"
-                        >
-                            <Image alt="logo" fill src="/images/primary-logo.png" />
-                            {/* <LogoIcon width="72px" height="56px" /> */}
-                        </Link>
-                        <div className="block lg:hidden relative w-7 h-6">
-                            <span className="absolute right-0 top-0 bg-white w-full h-0.5 rounded-xl"></span>
-                            <span className="absolute right-0 top-0 bottom-0 my-auto bg-white w-3/4 h-0.5 rounded-xl"></span>
-                            <span className="absolute right-0 bottom-0 bg-white w-full h-0.5 rounded-xl"></span>
-                        </div>
+        <header className="fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-40 bg-gradient-to-l from-background to-section md:rounded-xl">
+            <div className="flex items-center justify-between h-20 px-3 lg:px-6">
+                {/* Logo */}
+                <div className="flex flex-row-reverse sm:flex-row items-center justify-between sm:justify-start gap-2.5 w-full sm:w-auto">
+                    <Link
+                        href="#"
+                        className="block font-HerrVonMuellerhoff-Regular text-4xl relative h-14 w-18"
+                    >
+                        <Image alt="logo" fill src="/images/primary-logo.png" />
+                        {/* <LogoIcon width="72px" height="56px" /> */}
+                    </Link>
+                    <div className="block lg:hidden relative w-7 h-6">
+                        <span className="absolute right-0 top-0 bg-white w-full h-0.5 rounded-xl"></span>
+                        <span className="absolute right-0 top-0 bottom-0 my-auto bg-white w-3/4 h-0.5 rounded-xl"></span>
+                        <span className="absolute right-0 bottom-0 bg-white w-full h-0.5 rounded-xl"></span>
                     </div>
-                    {/* Menu */}
-                    <ul className="hidden lg:flex items-center gap-10 font-IransansWeb-Medium">
-                        {menuLinks.map((link) => (
-                            <li key={link.id}>
-                                <Link
-                                    className="transition-colors duration-300 hover:text-primary"
-                                    href={link.href}
-                                >
-                                    {link.title}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    {/* Social Media Links */}
-                    <div className="hidden sm:flex items-center gap-2">
-                        {socialMediaLinks.map((link) => {
-                            const Icon = setSocialMediaIcon(link.title);
+                </div>
+                {/* Menu */}
+                <ul className="hidden lg:flex items-center gap-10 font-IransansWeb-Medium">
+                    {menuLinks.map((link) => (
+                        <li key={link.id}>
+                            <Link
+                                className="transition-colors duration-300 hover:text-primary"
+                                href={link.href}
+                            >
+                                {link.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                {/* Social Media Links */}
+                <div className="hidden sm:flex items-center gap-2">
+                    {socialMediaLinks.map((link) => {
+                        const Icon = setSocialMediaIcon(link.title);
 
-                            return (
-                                <Link
-                                    className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"
-                                    key={link.id}
-                                    href={link.href}
-                                >
-                                    <Icon
-                                        color="currentColor"
-                                        width={22}
-                                        height={22}
-                                    />
-                                </Link>
-                            );
-                        })}
-                    </div>
+                        return (
+                            <Link
+                                className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"
+                                key={link.id}
+                                href={link.href}
+                            >
+                                <Icon
+                                    color="currentColor"
+                                    width={22}
+                                    height={22}
+                                />
+                            </Link>
+                        );
+                    })}
                 </div>
             </div>
         </header>
