@@ -5,10 +5,9 @@ import WhatsappIcon from "../icons/WhatsappIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import TelegramIcon from "../icons/TelegramIcon";
-import MenuIcon from "../icons/MenuIcon";
-import LogoIcon from "../icons/LogoIcon";
 
 function Header() {
+    
     const menuLinks = [
         {
             id: 1,
@@ -101,7 +100,6 @@ function Header() {
                 <div className="hidden sm:flex items-center gap-2">
                     {socialMediaLinks.map((link) => {
                         const Icon = setSocialMediaIcon(link.title);
-
                         return (
                             <Link
                                 className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"

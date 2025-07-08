@@ -81,7 +81,7 @@ export default function Home() {
                                 <span className="text-primary">من</span>
                             </h3>
                             {/* Skills Content Wrapper */}
-                            <div className="grid grid-cols-3 gap-8">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {/* Skill Item */}
                                 {skills.map((skill) => (
                                     <SkillItem key={skill.id} {...skill} />
@@ -90,6 +90,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+                {/*  */}
             </main>
         </div>
     );

@@ -10,6 +10,7 @@ import NextJsIcon from "../icons/brands/NextJsIcon";
 import TypescriptIcon from "../icons/brands/TypescriptIcon";
 import GithubIcon from "../icons/brands/GithubIcon";
 import TailwindCssIcon from "../icons/brands/TailwindCssIcon";
+import RegexIcon from "../icons/brands/RegexIcon";
 
 const skillIcons = {
     Git: GitIcon,
@@ -22,17 +23,24 @@ const skillIcons = {
     Typescript: TypescriptIcon,
     Github: GithubIcon,
     TailwindCss: TailwindCssIcon,
+    Regex: RegexIcon
 };
 
-function SkillItem({ title, percent }) {
+const setStyleToIcons = {
+    Github: '#fff',
+    "Next Js": '#fff'
+}
+
+function SkillItem({ title, percent, id }) {
     console.log(title)
     const Icon = skillIcons[title];
+    const style = setStyleToIcons[title]
     return (
-        <div className="basis-1/4 bg-section rounded-xl p-4">
+        <div className={`bg-section rounded-lg p-3 ${id === 10 && 'md:col-start-2'}`}>
             {/* Statistic */}
             <div className="flex items-center justify-between pb-4">
                 {/* Text */}
-                {Icon && <Icon width={30} />}
+                {Icon && <Icon color={style} width={30} />}
 
                 <span className="font-IransansWeb-Bold">{title}</span>
                 {/* Icon */}
