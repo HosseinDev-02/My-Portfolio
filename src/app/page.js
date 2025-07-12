@@ -1,7 +1,9 @@
 import Header from "@/components/Header/Header";
+import ProjectItem from "@/components/ProjectItem/ProjectItem";
+import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import { skills } from "@/data";
+import { projects, skills } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -90,7 +92,34 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                {/*  */}
+                {/* Projects */}
+                <section className="projects py-20 relative">
+                    {/* Container */}
+                    <div className="container">
+                        {/* Projects Wrapper */}
+                        <div>
+                            {/* Section Title */}
+                            <h3 className="text-white font-IransansWeb-Black text-2xl text-center mb-20">
+                                نمونه کار های{" "}
+                                <span className="text-primary">من</span>
+                            </h3>
+                            {/* Projects Content */}
+                            <div className="grid grid-cols-2 gap-10">
+                                {/* Project Item */}
+                                {
+                                    projects.map(project => (
+                                        <ProjectSlider key={project.id} {...project}/>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    {/* Shapes */}
+                    {/* Right-Shape */}
+                    <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div>
+                    {/* Left Shape */}
+                    <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div>
+                </section>
             </main>
         </div>
     );

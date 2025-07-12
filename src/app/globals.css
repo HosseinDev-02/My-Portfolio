@@ -44,7 +44,7 @@
 }
 
 body {
-  @apply bg-background text-caption font-IransansWeb
+  @apply bg-background text-caption font-IransansWeb overflow-x-hidden
 }
 
 

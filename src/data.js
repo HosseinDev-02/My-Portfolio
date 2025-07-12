@@ -51,4 +51,62 @@ const skills = [
     },
 ];
 
-export { skills };
+const projects = [
+    {
+        id: 1,
+        title: "داشبورد مدیریتی",
+        description: `
+        برای مدیریت و نگهداری مشاغل مختلف مناسب Frest پنل مدیریت
+        است.
+        توسعه داده شده است. Tailwind و React با استفاده از
+    `,
+        href: "https://frest-dashboard.vercel.app",
+        images: [
+            "/images/projects/project-3-3.png",
+            "/images/projects/project-1-1.png",
+            "/images/projects/project-2-2.png",
+            "/images/projects/project-4-4.png",
+        ],
+    },
+    {
+        id: 2,
+        title: "سایت شرکتی",
+        description: `لندریک یک سایت شرکتی است و دارای صفحات مختلفی است .
+        توسعه داده شده است. React ، Tailwind با استفاده`,
+        href: "https://landrick-neon.vercel.app",
+        images: [
+            "/images/projects/project-3-3.png",
+            "/images/projects/project-1-1.png",
+            "/images/projects/project-2-2.png",
+            "/images/projects/project-4-4.png",
+        ],
+    },
+    {
+        id: 3,
+        title: "سایت آموزشی",
+        description: `یک سایت آموزش برنامه نویسی است.
+        توسعه داده شده است . React , Tailwind با استفاده از`,
+        href: "https://programming-learning-site.vercel.app",
+        images: [
+            "/images/projects/project-3-3.png",
+            "/images/projects/project-1-1.png",
+            "/images/projects/project-2-2.png",
+            "/images/projects/project-4-4.png",
+        ],
+    },
+    {
+        id: 4,
+        title: "سایت فروشگاهی",
+        description: `سایت فروش لوازم جانبی لپ تاپ و کامپیوتر .
+        توسعه داده شده است . HTML , CSS , JavaScript با استفاده ا`,
+        href: "https://digi-mode.vercel.app",
+        images: [
+            "/images/projects/project-3-3.png",
+            "/images/projects/project-1-1.png",
+            "/images/projects/project-2-2.png",
+            "/images/projects/project-4-4.png",
+        ],
+    },
+];
+
+export { skills, projects };
