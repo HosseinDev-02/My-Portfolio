@@ -1,5 +1,4 @@
 import Header from "@/components/Header/Header";
-import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
@@ -18,7 +17,7 @@ export default function Home() {
                     <div className="container">
                         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-y-16 gap-x-10">
                             {/* About Me Content */}
-                            <div className="text-center lg:text-right basis-1/2">
+                            <div className="px-4 md:px-0 text-center lg:text-right basis-1/2">
                                 <div className="text-primary font-IransansWeb-Bold leading-snug text-4xl md:text-5xl flex flex-col items-center justify-center lg:justify-start lg:items-start gap-px lg:max-w-100 w-full">
                                     <span className="text-caption text-2xl">
                                         درود🖐
@@ -72,7 +71,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section className="skills py-20">
+                <section className="skills py-20 px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Content */}
@@ -93,7 +92,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Projects */}
-                <section className="projects py-20 relative">
+                <section className="projects py-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat">
                     {/* Container */}
                     <div className="container">
                         {/* Projects Wrapper */}
@@ -104,7 +103,7 @@ export default function Home() {
                                 <span className="text-primary">من</span>
                             </h3>
                             {/* Projects Content */}
-                            <div className="grid grid-cols-2 gap-10">
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                 {/* Project Item */}
                                 {
                                     projects.map(project => (
@@ -116,9 +115,9 @@ export default function Home() {
                     </div>
                     {/* Shapes */}
                     {/* Right-Shape */}
-                    <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div>
+                    {/* <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                     {/* Left Shape */}
-                    <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div>
+                    {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                 </section>
             </main>
         </div>

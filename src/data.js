@@ -62,10 +62,10 @@ const projects = [
     `,
         href: "https://frest-dashboard.vercel.app",
         images: [
-            "/images/projects/project-3-3.png",
-            "/images/projects/project-1-1.png",
-            "/images/projects/project-2-2.png",
-            "/images/projects/project-4-4.png",
+            "/images/projects/frest-dashboard/img-1.png",
+            "/images/projects/frest-dashboard/img-2.png",
+            "/images/projects/frest-dashboard/img-3.png",
+            "/images/projects/frest-dashboard/img-4.png",
         ],
     },
     {
@@ -75,10 +75,10 @@ const projects = [
         توسعه داده شده است. React ، Tailwind با استفاده`,
         href: "https://landrick-neon.vercel.app",
         images: [
-            "/images/projects/project-3-3.png",
-            "/images/projects/project-1-1.png",
-            "/images/projects/project-2-2.png",
-            "/images/projects/project-4-4.png",
+            "/images/projects/landrick/img-1.png",
+            "/images/projects/landrick/img-2.png",
+            "/images/projects/landrick/img-3.png",
+            "/images/projects/landrick/img-4.png",
         ],
     },
     {
@@ -88,10 +88,10 @@ const projects = [
         توسعه داده شده است . React , Tailwind با استفاده از`,
         href: "https://programming-learning-site.vercel.app",
         images: [
-            "/images/projects/project-3-3.png",
-            "/images/projects/project-1-1.png",
-            "/images/projects/project-2-2.png",
-            "/images/projects/project-4-4.png",
+            "/images/projects/programming-learning/img-2.png",
+            "/images/projects/programming-learning/img-1.png",
+            "/images/projects/programming-learning/img-3.png",
+            "/images/projects/programming-learning/img-4.png",
         ],
     },
     {
@@ -101,10 +101,10 @@ const projects = [
         توسعه داده شده است . HTML , CSS , JavaScript با استفاده ا`,
         href: "https://digi-mode.vercel.app",
         images: [
-            "/images/projects/project-3-3.png",
-            "/images/projects/project-1-1.png",
-            "/images/projects/project-2-2.png",
-            "/images/projects/project-4-4.png",
+            "/images/projects/digi-mode/img-1.png",
+            "/images/projects/digi-mode/img-2.png",
+            "/images/projects/digi-mode/img-3.png",
+            "/images/projects/digi-mode/img-4.png",
         ],
     },
 ];
