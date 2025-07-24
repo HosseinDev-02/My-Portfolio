@@ -1,13 +1,36 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import WhatsappIcon from "../icons/WhatsappIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import TelegramIcon from "../icons/TelegramIcon";
+import { useEffect } from "react";
 
 function Header() {
-    
+    const [userScroll, setUserScroll] = useState(false);
+
+    useEffect(() => {
+        if (document.documentElement.scrollTop > 250) {
+            console.log("header fixed");
+            setUserScroll(true);
+        } else {
+            console.log("header top");
+            setUserScroll(false);
+        }
+        window.addEventListener("scroll", (e) => {
+            const scrollTop = document.documentElement.scrollTop;
+            if (scrollTop > 250) {
+                console.log("header fixed");
+                setUserScroll(true);
+            } else {
+                console.log("header top");
+                setUserScroll(false);
+            }
+        });
+    }, []);
+
     const menuLinks = [
         {
             id: 1,
@@ -66,7 +89,13 @@ function Header() {
         (linkTitle.includes("telegram") && TelegramIcon);
 
     return (
-        <header className="fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-40 bg-gradient-to-l from-background to-section md:rounded-xl">
+        <header
+            className={`fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-40 bg-gradient-to-l from-background to-section md:rounded-xl transition-all duration-300 shadow-[0px_2px_10px_4px_rgba(0,0,0,45%)] md:shadow-none ${
+                userScroll
+                    ? "!top-0 !left-0 !right-0 !rounded-none md:!shadow-[0px_2px_10px_4px_rgba(0,0,0,45%)]"
+                    : ""
+            }`}
+        >
             <div className="flex items-center justify-between h-20 px-3 lg:px-6">
                 {/* Logo */}
                 <div className="flex flex-row-reverse sm:flex-row items-center justify-between sm:justify-start gap-2.5 w-full sm:w-auto">
