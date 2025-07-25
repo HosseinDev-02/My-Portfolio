@@ -1,5 +1,7 @@
+import BlogItem from "@/components/BlogItem/BlogItem";
 import Header from "@/components/Header/Header";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
+import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
 import { projects, skills } from "@/data";
@@ -7,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-
     return (
         <div className="">
             <Header />
@@ -72,16 +73,12 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section className="skills py-20 px-4 md:px-0">
+                <section className="skills pt-20 px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Content */}
                         <div>
-                            {/* Section Title */}
-                            <h3 className="text-white font-IransansWeb-Black text-2xl text-center mb-20">
-                                مهارت های{" "}
-                                <span className="text-primary">من</span>
-                            </h3>
+                            <SectionHeader title="مهارت های" />
                             {/* Skills Content Wrapper */}
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {/* Skill Item */}
@@ -93,24 +90,22 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Projects */}
-                <section className="projects py-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat">
+                <section className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat">
                     {/* Container */}
                     <div className="container">
                         {/* Projects Wrapper */}
                         <div>
                             {/* Section Title */}
-                            <h3 className="text-white font-IransansWeb-Black text-2xl text-center mb-20">
-                                نمونه کار های{" "}
-                                <span className="text-primary">من</span>
-                            </h3>
+                            <SectionHeader title="نمونه کار های" />
                             {/* Projects Content */}
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                 {/* Project Item */}
-                                {
-                                    projects.map(project => (
-                                        <ProjectSlider key={project.id} {...project}/>
-                                    ))
-                                }
+                                {projects.map((project) => (
+                                    <ProjectSlider
+                                        key={project.id}
+                                        {...project}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -119,6 +114,18 @@ export default function Home() {
                     {/* <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                     {/* Left Shape */}
                     {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
+                </section>
+                {/* Blogs */}
+                <section className="blogs py-20 px-4 md:px-0">
+                    <div className="container">
+                    {/* Section Title */}
+                    <SectionHeader title='مقاله های'/>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <BlogItem />
+                            <BlogItem />
+                            <BlogItem />
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>
