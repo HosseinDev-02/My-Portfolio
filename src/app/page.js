@@ -116,14 +116,33 @@ export default function Home() {
                     {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                 </section>
                 {/* Blogs */}
-                <section className="blogs py-20 px-4 md:px-0">
+                <section className="blogs pt-20 px-4 md:px-0">
                     <div className="container">
-                    {/* Section Title */}
-                    <SectionHeader title='مقاله های'/>
+                        {/* Section Title */}
+                        <SectionHeader title="مقاله های" />
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                             <BlogItem />
                             <BlogItem />
                             <BlogItem />
+                        </div>
+                    </div>
+                </section>
+                {/* Contact Us */}
+                <section className="contact my-20 px-4 md:px-0">
+                    {/* Section Title */}
+                    <SectionHeader title="تماس با" />
+                    <div className="relative min-h-[800px] h-full">
+                        <Image
+                            src="/images/contact.jpg"
+                            className="-z-10"
+                            fill
+                            objectFit="cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
+
+                        <div className="">
+                            {/* Section Content */}
+                            <div className=""></div>
                         </div>
                     </div>
                 </section>
