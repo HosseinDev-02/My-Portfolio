@@ -1,5 +1,6 @@
 import BlogItem from "@/components/BlogItem/BlogItem";
 import Header from "@/components/Header/Header";
+import Input from "@/components/Input/Input";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
@@ -167,22 +168,10 @@ export default function Home() {
                                 {/* Contact Us Form */}
                                 <div className="col-span-7">
                                     <form className="grid grid-cols-1 sm:grid-cols-12 gap-4" action="#">
-                                        <div className="sm:col-span-6 flex flex-col items-start gap-3">
-                                            <span className="font-IransansWeb-Medium text-sm">نام :</span>
-                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="نام خود را وارد کنید ..." type="text" name="" id="" />
-                                        </div>
-                                        <div className="sm:col-span-6 flex flex-col items-start gap-3">
-                                            <span className="font-IransansWeb-Medium text-sm">ایمیل :</span>
-                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="ایمیل خود را وارد کنید ..." type="email" name="" id="" />
-                                        </div>
-                                        <div className="sm:col-span-12 flex flex-col items-start gap-3">
-                                            <div className="font-IransansWeb-Medium text-sm">موضوع : <span className="text-xs">( اختیاری )</span></div>
-                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="موضوع پیام خود را وارد کنید ..." type="text" name="" id="" />
-                                        </div>
-                                        <div className="sm:col-span-12 flex flex-col items-start gap-3">
-                                            <span className="font-IransansWeb-Medium text-sm">متن :</span>
-                                            <textarea placeholder="متن پیام خود را وارد کنید ..." className="w-full resize-none outline-none border border-white/30 rounded-xl p-2 h-40" name="" id=""></textarea>
-                                        </div>
+                                        <Input label='نام :' require={true} type='text' className='sm:col-span-6' placeholder='نام خود را وارد کنید ...'/>
+                                        <Input label='ایمیل :' require={true} type='text' className='sm:col-span-6' placeholder='ایمیل خود را وارد کنید ...'/>
+                                        <Input label='موضوع :' require={false} type='text' className='col-span-12' placeholder='موضوع خود را وارد کنید ...'/>
+                                        <Input label='متن :' require={true} type='textarea' className='sm:col-span-12' placeholder='متن پیام خود را وارد کنید ...'/>
                                     </form>
                                     <button className="flex items-center justify-center gap-2 font-IransansWeb-Medium bg-primary rounded-xl px-6 h-10 mt-4 mx-auto cursor-pointer transition-all duration-300 hover:opacity-80" type="submit">
                                             <span>ارسال</span>
