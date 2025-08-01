@@ -4,6 +4,11 @@ import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
+import InstagramIcon from "@/components/icons/InstagramIcon";
+import PaperPlaneIcon from "@/components/icons/PaperPlaneIcon";
+import TelegramIcon from "@/components/icons/TelegramIcon";
+import WhatsappIcon from "@/components/icons/WhatsappIcon";
+import GithubIcon from "@/components/icons/brands/GithubIcon";
 import { projects, skills } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -131,18 +136,60 @@ export default function Home() {
                 <section className="contact my-20 px-4 md:px-0">
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />
-                    <div className="relative min-h-[800px] h-full">
+                    <div className="relative py-40 md:py-80">
                         <Image
                             src="/images/contact.jpg"
                             className="-z-10"
                             fill
                             objectFit="cover"
+                            alt="contact-image"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
 
-                        <div className="">
+                        <div className="container flex items-center">
                             {/* Section Content */}
-                            <div className=""></div>
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+                                {/* Contact Us Text */}
+                                <div className="col-span-5">
+                                    <h5 className="font-IransansWeb-Bold text-xl mb-6">
+                                        <span className="text-primary">آماده همکاری</span> هستم .
+                                    </h5>
+                                    <p className="font-IransansWeb-Medium leading-relaxed">
+                                        اگر پروژه ای در ذهن دارید ، سوالی دارید یا فقط می خواهید سلامی بفرستید خوشحال میشم ازتون دریافت کنم .
+                                    </p>
+                                    <div className="flex items-center gap-2 text-white mt-8">
+                                        <InstagramIcon color='#fff' width={24} height={24}/>
+                                        <WhatsappIcon color='#fff' width={24} height={24}/>
+                                        <TelegramIcon color='#fff' width={24} height={24}/>
+                                        <GithubIcon color='#fff' width={24} height={24}/>
+                                    </div>
+                                </div>
+                                {/* Contact Us Form */}
+                                <div className="col-span-7">
+                                    <form className="grid grid-cols-1 sm:grid-cols-12 gap-4" action="#">
+                                        <div className="sm:col-span-6 flex flex-col items-start gap-3">
+                                            <span className="font-IransansWeb-Medium text-sm">نام :</span>
+                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="نام خود را وارد کنید ..." type="text" name="" id="" />
+                                        </div>
+                                        <div className="sm:col-span-6 flex flex-col items-start gap-3">
+                                            <span className="font-IransansWeb-Medium text-sm">ایمیل :</span>
+                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="ایمیل خود را وارد کنید ..." type="email" name="" id="" />
+                                        </div>
+                                        <div className="sm:col-span-12 flex flex-col items-start gap-3">
+                                            <div className="font-IransansWeb-Medium text-sm">موضوع : <span className="text-xs">( اختیاری )</span></div>
+                                            <input className="font-IransansWeb-Medium placeholder:text-sm w-full outline-none border border-white/30 rounded-xl px-2 h-10" placeholder="موضوع پیام خود را وارد کنید ..." type="text" name="" id="" />
+                                        </div>
+                                        <div className="sm:col-span-12 flex flex-col items-start gap-3">
+                                            <span className="font-IransansWeb-Medium text-sm">متن :</span>
+                                            <textarea placeholder="متن پیام خود را وارد کنید ..." className="w-full resize-none outline-none border border-white/30 rounded-xl p-2 h-40" name="" id=""></textarea>
+                                        </div>
+                                    </form>
+                                    <button className="flex items-center justify-center gap-2 font-IransansWeb-Medium bg-primary rounded-xl px-6 h-10 mt-4 mx-auto cursor-pointer transition-all duration-300 hover:opacity-80" type="submit">
+                                            <span>ارسال</span>
+                                            <PaperPlaneIcon className='shrink-0 -rotate-[135deg]' width={24} height={24}/>
+                                        </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
