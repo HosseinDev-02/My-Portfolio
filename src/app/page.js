@@ -85,11 +85,11 @@ export default function Home() {
                                     های جدید و ایجاد رابط های مدرن و بهینه.
                                 </p>
                                 <Link
-                                    className="bg-primary transition-all duration-300 hover:opacity-90 rounded-4xl h-11 px-6 inline-flex items-center justify-center gap-2 font-IransansWeb-Medium mt-8"
+                                    className="bg-primary transition-all duration-300 hover:opacity-80 rounded-4xl h-11 px-6 inline-flex items-center justify-center gap-2 font-IransansWeb-Medium mt-8"
                                     href="#"
                                 >
                                     تماس با من
-                                    <ArrowLeftIcon width={20} height={20} />
+                                    {/* <ArrowLeftIcon width={20} height={20} /> */}
                                 </Link>
                             </div>
                             {/* About Me Picture */}

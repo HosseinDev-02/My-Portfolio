@@ -58,11 +58,11 @@ function Footer() {
         },
     ];
     return (
-        <div className="py-20 bg-footer">
+        <div className="bg-footer">
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
-                <div className="flex justify-between gap-10">
+                <div className="flex flex-wrap justify-between gap-10 mb-4 py-20">
                     {/* Footer About Me */}
                     <div className="max-w-[394px] w-full">
                         <Link
@@ -142,6 +142,10 @@ function Footer() {
                                 </div>
                         </div>
                     </div>
+                </div>
+                {/* Footer Copy Right */}
+                <div className="py-4 border-t border-white/30">
+                    <p className="font-IransansWeb-Medium">توسعه داده شده با <span className="text-red-500"> ❤ </span> توسط حسین رستمی</p>
                 </div>
             </div>
         </div>
