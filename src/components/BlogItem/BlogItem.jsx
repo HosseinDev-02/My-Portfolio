@@ -5,7 +5,7 @@ import ArrowLeftIcon from "../icons/ArrowLeftIcon";
 
 function BlogItem() {
     return (
-        <div className="group rounded-xl shadow-[0_0_8px_1px_rgba(0,0,0,40%)] overflow-hidden">
+        <div className="group rounded-md shadow-[0_0_8px_1px_rgba(0,0,0,40%)] overflow-hidden">
             {/* Blog Picture */}
             <div className="relative h-[350px]">
                 <Image

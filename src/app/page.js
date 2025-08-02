@@ -1,4 +1,5 @@
 import BlogItem from "@/components/BlogItem/BlogItem";
+import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Input from "@/components/Input/Input";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
@@ -6,13 +7,43 @@ import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
 import InstagramIcon from "@/components/icons/InstagramIcon";
+import LinkedInIcon from "@/components/icons/LinkedInIcon";
 import PaperPlaneIcon from "@/components/icons/PaperPlaneIcon";
 import TelegramIcon from "@/components/icons/TelegramIcon";
 import WhatsappIcon from "@/components/icons/WhatsappIcon";
-import GithubIcon from "@/components/icons/brands/GithubIcon";
+
 import { projects, skills } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
+
+const setSocialMediaIcon = (linkTitle) =>
+    (linkTitle.includes("whatsapp") && WhatsappIcon) ||
+    (linkTitle.includes("linkedin") && LinkedInIcon) ||
+    (linkTitle.includes("instagram") && InstagramIcon) ||
+    (linkTitle.includes("telegram") && TelegramIcon);
+
+const socialMediaLinks = [
+    {
+        id: 1,
+        title: "whatsapp",
+        href: "#",
+    },
+    {
+        id: 2,
+        title: "linkedin",
+        href: "#",
+    },
+    {
+        id: 3,
+        title: "instagram",
+        href: "#",
+    },
+    {
+        id: 4,
+        title: "telegram",
+        href: "#",
+    },
+];
 
 export default function Home() {
     return (
@@ -134,55 +165,107 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Contact Us */}
-                <section className="contact my-20 px-4 md:px-0">
+                <section className="contact mt-20 px-4 md:px-0 relative py-20">
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />
-                    <div className="relative py-40 md:py-80">
-                        <Image
-                            src="/images/contact.jpg"
-                            className="-z-10"
-                            fill
-                            objectFit="cover"
-                            alt="contact-image"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
-
-                        <div className="container flex items-center">
-                            {/* Section Content */}
-                            <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-                                {/* Contact Us Text */}
-                                <div className="col-span-5">
-                                    <h5 className="font-IransansWeb-Bold text-xl mb-6">
-                                        <span className="text-primary">آماده همکاری</span> هستم .
-                                    </h5>
-                                    <p className="font-IransansWeb-Medium leading-relaxed">
-                                        اگر پروژه ای در ذهن دارید ، سوالی دارید یا فقط می خواهید سلامی بفرستید خوشحال میشم ازتون دریافت کنم .
-                                    </p>
-                                    <div className="flex items-center gap-2 text-white mt-8">
-                                        <InstagramIcon color='#fff' width={24} height={24}/>
-                                        <WhatsappIcon color='#fff' width={24} height={24}/>
-                                        <TelegramIcon color='#fff' width={24} height={24}/>
-                                        <GithubIcon color='#fff' width={24} height={24}/>
-                                    </div>
+                    <Image
+                        src="/images/contact.jpg"
+                        className="-z-10"
+                        fill
+                        objectFit="cover"
+                        alt="contact-image"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
+                    <div className="container flex items-center py-20 md:py-40">
+                        {/* Section Content */}
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+                            {/* Contact Us Text */}
+                            <div className="col-span-5">
+                                <h5 className="font-IransansWeb-Bold text-xl mb-6">
+                                    <span className="text-primary">
+                                        آماده همکاری
+                                    </span>{" "}
+                                    هستم .
+                                </h5>
+                                <p className="font-IransansWeb-Medium leading-relaxed">
+                                    اگر پروژه ای در ذهن دارید ، سوالی دارید یا
+                                    فقط می خواهید سلامی بفرستید خوشحال میشم
+                                    ازتون دریافت کنم .
+                                </p>
+                                <div className="hidden sm:flex items-center gap-2 mt-8">
+                                    {socialMediaLinks.map((link) => {
+                                        const Icon = setSocialMediaIcon(
+                                            link.title
+                                        );
+                                        return (
+                                            <Link
+                                                className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"
+                                                key={link.id}
+                                                href={link.href}
+                                            >
+                                                <Icon
+                                                    color="currentColor"
+                                                    width={22}
+                                                    height={22}
+                                                />
+                                            </Link>
+                                        );
+                                    })}
                                 </div>
-                                {/* Contact Us Form */}
-                                <div className="col-span-7">
-                                    <form className="grid grid-cols-1 sm:grid-cols-12 gap-4" action="#">
-                                        <Input label='نام :' require={true} type='text' className='sm:col-span-6' placeholder='نام خود را وارد کنید ...'/>
-                                        <Input label='ایمیل :' require={true} type='text' className='sm:col-span-6' placeholder='ایمیل خود را وارد کنید ...'/>
-                                        <Input label='موضوع :' require={false} type='text' className='col-span-12' placeholder='موضوع خود را وارد کنید ...'/>
-                                        <Input label='متن :' require={true} type='textarea' className='sm:col-span-12' placeholder='متن پیام خود را وارد کنید ...'/>
-                                    </form>
-                                    <button className="flex items-center justify-center gap-2 font-IransansWeb-Medium bg-primary rounded-xl px-6 h-10 mt-4 mx-auto cursor-pointer transition-all duration-300 hover:opacity-80" type="submit">
-                                            <span>ارسال</span>
-                                            <PaperPlaneIcon className='shrink-0 -rotate-[135deg]' width={24} height={24}/>
-                                        </button>
-                                </div>
+                            </div>
+                            {/* Contact Us Form */}
+                            <div className="col-span-7">
+                                <form
+                                    className="sm:grid sm:grid-cols-12 gap-4"
+                                    action="#"
+                                >
+                                    <Input
+                                        label="نام :"
+                                        require={true}
+                                        type="text"
+                                        className="sm:col-span-6 mt-4 sm:mt-0"
+                                        placeholder="نام خود را وارد کنید ..."
+                                    />
+                                    <Input
+                                        label="ایمیل :"
+                                        require={true}
+                                        type="text"
+                                        className="sm:col-span-6 mt-4 sm:mt-0"
+                                        placeholder="ایمیل خود را وارد کنید ..."
+                                    />
+                                    <Input
+                                        label="موضوع :"
+                                        require={false}
+                                        type="text"
+                                        className="col-span-12 mt-4 sm:mt-0"
+                                        placeholder="موضوع خود را وارد کنید ..."
+                                    />
+                                    <Input
+                                        label="متن :"
+                                        require={true}
+                                        type="textarea"
+                                        className="sm:col-span-12 mt-4 sm:mt-0"
+                                        placeholder="متن پیام خود را وارد کنید ..."
+                                    />
+                                </form>
+                                <button
+                                    className="flex items-center justify-center gap-2 font-IransansWeb-Medium bg-primary rounded-md px-8 h-10 mt-4 mx-auto cursor-pointer transition-all duration-300 hover:opacity-80"
+                                    type="submit"
+                                >
+                                    <span>ارسال</span>
+                                    <PaperPlaneIcon
+                                        className="shrink-0 -rotate-[135deg]"
+                                        width={24}
+                                        height={24}
+                                    />
+                                </button>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
+            {/* Footer */}
+            <Footer/>
         </div>
     );
 }
