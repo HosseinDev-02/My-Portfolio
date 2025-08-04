@@ -2,9 +2,11 @@ import BlogItem from "@/components/BlogItem/BlogItem";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Input from "@/components/Input/Input";
+import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
 import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
+import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
 import InstagramIcon from "@/components/icons/InstagramIcon";
 import LinkedInIcon from "@/components/icons/LinkedInIcon";
@@ -12,38 +14,10 @@ import PaperPlaneIcon from "@/components/icons/PaperPlaneIcon";
 import TelegramIcon from "@/components/icons/TelegramIcon";
 import WhatsappIcon from "@/components/icons/WhatsappIcon";
 
-import { projects, skills } from "@/data";
+import { projects, skills, socialMediaLinks } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
-const setSocialMediaIcon = (linkTitle) =>
-    (linkTitle.includes("whatsapp") && WhatsappIcon) ||
-    (linkTitle.includes("linkedin") && LinkedInIcon) ||
-    (linkTitle.includes("instagram") && InstagramIcon) ||
-    (linkTitle.includes("telegram") && TelegramIcon);
-
-const socialMediaLinks = [
-    {
-        id: 1,
-        title: "whatsapp",
-        href: "#",
-    },
-    {
-        id: 2,
-        title: "linkedin",
-        href: "#",
-    },
-    {
-        id: 3,
-        title: "instagram",
-        href: "#",
-    },
-    {
-        id: 4,
-        title: "telegram",
-        href: "#",
-    },
-];
 
 export default function Home() {
     return (
@@ -84,13 +58,12 @@ export default function Home() {
                                     تجربه کاربری . علاقه مند به یادگیری فناوری
                                     های جدید و ایجاد رابط های مدرن و بهینه.
                                 </p>
-                                <Link
-                                    className="bg-primary transition-all duration-300 hover:opacity-80 rounded-4xl h-11 px-6 inline-flex items-center justify-center gap-2 font-IransansWeb-Medium mt-8"
-                                    href="#"
-                                >
-                                    تماس با من
-                                    {/* <ArrowLeftIcon width={20} height={20} /> */}
-                                </Link>
+                                {/* Social Media Links */}
+                                <div className="hidden sm:flex items-center gap-2 mt-8">
+                                    {socialMediaLinks.map((link) => (
+                                        <SocialMedia key={link.id} {...link} />
+                                    ))}
+                                </div>
                             </div>
                             {/* About Me Picture */}
 
@@ -127,7 +100,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Projects */}
-                <section className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat">
+                <section className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Projects Wrapper */}
@@ -193,24 +166,11 @@ export default function Home() {
                                     ازتون دریافت کنم .
                                 </p>
                                 <div className="hidden sm:flex items-center gap-2 mt-8">
-                                    {socialMediaLinks.map((link) => {
-                                        const Icon = setSocialMediaIcon(
-                                            link.title
-                                        );
-                                        return (
-                                            <Link
-                                                className="flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary"
-                                                key={link.id}
-                                                href={link.href}
-                                            >
-                                                <Icon
-                                                    color="currentColor"
-                                                    width={22}
-                                                    height={22}
-                                                />
-                                            </Link>
-                                        );
-                                    })}
+                                    {
+                                        socialMediaLinks.map(link => (
+                                            <SocialMedia key={link.id} {...link}/>
+                                        ))
+                                    }
                                 </div>
                             </div>
                             {/* Contact Us Form */}
@@ -248,24 +208,24 @@ export default function Home() {
                                         placeholder="متن پیام خود را وارد کنید ..."
                                     />
                                 </form>
-                                <button
-                                    className="flex items-center justify-center gap-2 font-IransansWeb-Medium bg-primary rounded-md px-8 h-10 mt-4 mx-auto cursor-pointer transition-all duration-300 hover:opacity-80"
-                                    type="submit"
-                                >
-                                    <span>ارسال</span>
-                                    <PaperPlaneIcon
-                                        className="shrink-0 -rotate-[135deg]"
-                                        width={24}
-                                        height={24}
-                                    />
-                                </button>
+                                <PrimaryButton
+                                    className="mx-auto mt-4"
+                                    title="ارسال"
+                                    icon={
+                                        <PaperPlaneIcon
+                                            className="shrink-0 -rotate-[135deg]"
+                                            width={24}
+                                            height={24}
+                                        />
+                                    }
+                                />
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
             {/* Footer */}
-            <Footer/>
+            <Footer />
         </div>
     );
 }

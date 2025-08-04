@@ -109,4 +109,50 @@ const projects = [
     },
 ];
 
-export { skills, projects };
+const socialMediaLinks = [
+    {
+        id: 1,
+        title: "whatsapp",
+        href: "#",
+    },
+    {
+        id: 2,
+        title: "linkedin",
+        href: "#",
+    },
+    {
+        id: 3,
+        title: "instagram",
+        href: "#",
+    },
+    {
+        id: 4,
+        title: "telegram",
+        href: "#",
+    },
+];
+
+const menuLinks = [
+    {
+        id: 1,
+        title: "درباره من",
+        href: "#",
+    },
+    {
+        id: 2,
+        title: "مهارت ها",
+        href: "#",
+    },
+    {
+        id: 3,
+        title: "نمونه کارها",
+        href: "#",
+    },
+    {
+        id: 4,
+        title: "وبلاگ",
+        href: "#",
+    },
+];
+
+export { skills, projects, socialMediaLinks, menuLinks };

@@ -58,7 +58,7 @@ function Footer() {
         },
     ];
     return (
-        <div className="bg-footer">
+        <div className="bg-footer px-4 md:px-0">
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
