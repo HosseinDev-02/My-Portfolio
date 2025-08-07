@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ name, id, type, className, placeholder, label, require }) {
+function Input({ name, id, type, className, placeholder, label, require, onChange }) {
     return (
         <>
             {(type === "text" && (
@@ -14,7 +14,7 @@ function Input({ name, id, type, className, placeholder, label, require }) {
                         </div>
                     )}
                     <input
-
+                        onChange={onChange}
                         className="border border-white/30 transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary font-IransansWeb-Medium placeholder:text-sm w-full outline-none rounded-md px-2 h-10"
                         placeholder={placeholder}
                         type={type}
@@ -31,7 +31,7 @@ function Input({ name, id, type, className, placeholder, label, require }) {
                             </span>
                         )}
                         <textarea
-
+                            onChange={onChange}
                             placeholder={placeholder || ""}
                             className="border border-white/30 transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary w-full resize-none outline-none rounded-md p-2 h-40"
                             name={name || ""}

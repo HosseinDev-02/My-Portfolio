@@ -1,9 +1,10 @@
 import BlogItem from "@/components/BlogItem/BlogItem";
+import EmailForm from "@/components/EmailForm/EmailForm";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Input from "@/components/Input/Input";
 import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
-import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
+import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
@@ -111,10 +112,7 @@ export default function Home() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                 {/* Project Item */}
                                 {projects.map((project) => (
-                                    <ProjectSlider
-                                        key={project.id}
-                                        {...project}
-                                    />
+                                    <ProjectItem key={project.id} {...project}/>
                                 ))}
                             </div>
                         </div>
@@ -174,52 +172,7 @@ export default function Home() {
                                 </div>
                             </div>
                             {/* Contact Us Form */}
-                            <div className="col-span-7">
-                                <form
-                                    className="sm:grid sm:grid-cols-12 gap-4"
-                                    action="#"
-                                >
-                                    <Input
-                                        label="نام :"
-                                        require={true}
-                                        type="text"
-                                        className="sm:col-span-6 mt-4 sm:mt-0"
-                                        placeholder="نام خود را وارد کنید ..."
-                                    />
-                                    <Input
-                                        label="ایمیل :"
-                                        require={true}
-                                        type="text"
-                                        className="sm:col-span-6 mt-4 sm:mt-0"
-                                        placeholder="ایمیل خود را وارد کنید ..."
-                                    />
-                                    <Input
-                                        label="موضوع :"
-                                        require={false}
-                                        type="text"
-                                        className="col-span-12 mt-4 sm:mt-0"
-                                        placeholder="موضوع خود را وارد کنید ..."
-                                    />
-                                    <Input
-                                        label="متن :"
-                                        require={true}
-                                        type="textarea"
-                                        className="sm:col-span-12 mt-4 sm:mt-0"
-                                        placeholder="متن پیام خود را وارد کنید ..."
-                                    />
-                                </form>
-                                <PrimaryButton
-                                    className="mx-auto mt-4"
-                                    title="ارسال"
-                                    icon={
-                                        <PaperPlaneIcon
-                                            className="shrink-0 -rotate-[135deg]"
-                                            width={24}
-                                            height={24}
-                                        />
-                                    }
-                                />
-                            </div>
+                            <EmailForm/>
                         </div>
                     </div>
                 </section>

@@ -61,12 +61,7 @@ const projects = [
         توسعه داده شده است. Tailwind و React با استفاده از
     `,
         href: "https://frest-dashboard.vercel.app",
-        images: [
-            "/images/projects/frest-dashboard/img-1.png",
-            "/images/projects/frest-dashboard/img-2.png",
-            "/images/projects/frest-dashboard/img-3.png",
-            "/images/projects/frest-dashboard/img-4.png",
-        ],
+        image: "/images/projects/frest-dashboard.png"
     },
     {
         id: 2,
@@ -74,12 +69,7 @@ const projects = [
         description: `لندریک یک سایت شرکتی است و دارای صفحات مختلفی است .
         توسعه داده شده است. React ، Tailwind با استفاده`,
         href: "https://landrick-neon.vercel.app",
-        images: [
-            "/images/projects/landrick/img-1.png",
-            "/images/projects/landrick/img-2.png",
-            "/images/projects/landrick/img-3.png",
-            "/images/projects/landrick/img-4.png",
-        ],
+        image: "/images/projects/landrick-index-dark-theme.png"
     },
     {
         id: 3,
@@ -87,12 +77,7 @@ const projects = [
         description: `یک سایت آموزش برنامه نویسی است.
         توسعه داده شده است . React , Tailwind با استفاده از`,
         href: "https://programming-learning-site.vercel.app",
-        images: [
-            "/images/projects/programming-learning/img-2.png",
-            "/images/projects/programming-learning/img-1.png",
-            "/images/projects/programming-learning/img-3.png",
-            "/images/projects/programming-learning/img-4.png",
-        ],
+        image: "/images/projects/nabeghe-academy-index-dark-theme.png"
     },
     {
         id: 4,
@@ -100,12 +85,7 @@ const projects = [
         description: `سایت فروش لوازم جانبی لپ تاپ و کامپیوتر .
         توسعه داده شده است . HTML , CSS , JavaScript با استفاده ا`,
         href: "https://digi-mode.vercel.app",
-        images: [
-            "/images/projects/digi-mode/img-1.png",
-            "/images/projects/digi-mode/img-2.png",
-            "/images/projects/digi-mode/img-3.png",
-            "/images/projects/digi-mode/img-4.png",
-        ],
+        image: "/images/projects/digimode-index.png"
     },
 ];
 
