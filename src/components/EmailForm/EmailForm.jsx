@@ -4,8 +4,14 @@ import React, { useState } from "react";
 import Input from "../Input/Input";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import PaperPlaneIcon from "../icons/PaperPlaneIcon";
+import { ToastContainer, toast } from "react-toastify";
+import LikeIcon from "../icons/LikeIcon";
+import MyCustomToast from "../MyCustomToast/MyCustomToast";
 
 function EmailForm() {
+    const displayToast = () => {
+        toast(<MyCustomToast/>)
+    }
     const [formData, setFormData] = useState({
         name: "",
         subject: "",
@@ -14,13 +20,13 @@ function EmailForm() {
     });
 
     const emailSubmitHandler = async () => {
-        const res = await fetch("http://localhost:3000/api/send-email", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(formData),
-        });
-        const data = await res.json();
-        console.log(data)
+        // const res = await fetch("http://localhost:3000/api/send-email", {
+        //     method: "POST",
+        //     headers: { "Content-Type": "application/json" },
+        //     body: JSON.stringify(formData),
+        // });
+        // const data = await res.json();
+        // console.log(data)
     };
 
     const inputChangeHandler = (e) => {
@@ -72,7 +78,7 @@ function EmailForm() {
                 />
             </form>
             <PrimaryButton
-                onClick={emailSubmitHandler}
+                onClick={displayToast}
                 className="mx-auto mt-4"
                 title="ارسال"
                 icon={
@@ -83,6 +89,8 @@ function EmailForm() {
                     />
                 }
             />
+            {/* My Toast Container */}
+            <ToastContainer autoClose={false}/>
         </div>
     );
 }
