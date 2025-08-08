@@ -5,13 +5,14 @@ import Input from "../Input/Input";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import PaperPlaneIcon from "../icons/PaperPlaneIcon";
 import { ToastContainer, toast } from "react-toastify";
-import LikeIcon from "../icons/LikeIcon";
 import MyCustomToast from "../MyCustomToast/MyCustomToast";
-
+import "react-toastify/dist/ReactToastify.css";
 function EmailForm() {
     const displayToast = () => {
-        toast(<MyCustomToast/>)
-    }
+        toast(<MyCustomToast title="موفقیت آمیز !" msg="پیام شما ارسال شد" type="success" />, {
+            progressClassName: '!bg-primary'
+        });
+    };
     const [formData, setFormData] = useState({
         name: "",
         subject: "",
@@ -90,7 +91,7 @@ function EmailForm() {
                 }
             />
             {/* My Toast Container */}
-            <ToastContainer autoClose={false}/>
+            <ToastContainer progressClassName={'!bg-primary'} toastClassName={'!p-0 !bg-transparent'}/>
         </div>
     );
 }

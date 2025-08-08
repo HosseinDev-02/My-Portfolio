@@ -69,6 +69,17 @@ body {
   @apply !bg-primary
 }
 
+.Toastify__close-button {
+  @apply !hidden
+} 
+
+.Toastify__progress-bar--bg {
+  @apply !bg-none !bg-box
+}
+
+.Toastify__progress-bar {
+  @apply !bg-none !bg-primary
+}
 
 
 /* Responsive */

@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
+// import { ToastContainer } from "react-toastify";
 
 export const metadata = {
     title: "Portfolio",
@@ -12,6 +13,8 @@ export default function RootLayout({ children }) {
             <body className="">
                 <Header />
                 {children}
+                {/* Toast Container */}
+                {/* <ToastContainer/> */}
             </body>
         </html>
     );

@@ -10,16 +10,11 @@ function CrossIcon({ width, height, color }) {
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
-                d="M8.46445 15.5355L15.5355 8.46446"
-                stroke={color || 'currentColor'}
-                strokeWidth={1.5}
+                d="M18 18L6 6M18 6L6 18"
+                stroke={color || "currentColor"}
+                strokeWidth={2}
                 strokeLinecap="round"
-            />
-            <path
-                d="M8.46446 8.46445L15.5355 15.5355"
-                stroke={color || 'currentColor'}
-                strokeWidth={1.5}
-                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );
