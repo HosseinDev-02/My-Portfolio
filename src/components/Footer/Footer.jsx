@@ -144,7 +144,7 @@ function Footer() {
                     </div>
                 </div>
                 {/* Footer Copy Right */}
-                <div className="py-4 border-t border-white/30">
+                <div className="py-4 border-t border-border">
                     <p className="font-IransansWeb-Medium">توسعه داده شده با <span className="text-primary"> ❤ </span> توسط حسین رستمی</p>
                 </div>
             </div>

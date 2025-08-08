@@ -17,6 +17,7 @@
   --color-box: #3a3a41;
   --color-section: #303036;
   --color-footer: #1C1C21;
+  --color-border: #61616B;
 
   /* Breakpoints */
   --breakpoint-*: initial;
