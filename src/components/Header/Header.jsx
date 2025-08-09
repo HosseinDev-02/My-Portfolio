@@ -12,19 +12,15 @@ function Header() {
 
     useEffect(() => {
         if (document.documentElement.scrollTop > 250) {
-            console.log("header fixed");
             setUserScroll(true);
         } else {
-            console.log("header top");
             setUserScroll(false);
         }
         window.addEventListener("scroll", (e) => {
             const scrollTop = document.documentElement.scrollTop;
             if (scrollTop > 250) {
-                console.log("header fixed");
                 setUserScroll(true);
             } else {
-                console.log("header top");
                 setUserScroll(false);
             }
         });

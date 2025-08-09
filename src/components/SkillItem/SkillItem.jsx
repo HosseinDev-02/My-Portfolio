@@ -32,7 +32,6 @@ const setStyleToIcons = {
 }
 
 function SkillItem({ title, percent, id }) {
-    console.log(title)
     const Icon = skillIcons[title];
     const style = setStyleToIcons[title]
     return (

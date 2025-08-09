@@ -16,7 +16,7 @@ const schema = yup.object({
         .string()
         .email("ایمیل معتبر نیست .")
         .required("ایمیل الزامی است ."),
-    name: yup.string().min(4, 'نام شما باید حداقل 4 کاراکتر داشته باشد'),
+    name: yup.string().min(4, "نام شما باید حداقل 4 کاراکتر داشته باشد"),
     message: yup.string().min(10, "پیام شما حداقل باید 10 کاراکتر داشته باشد"),
     subject: yup.string().notRequired(),
 });
@@ -28,17 +28,10 @@ function EmailForm() {
         formState: { errors },
     } = useForm({ resolver: yupResolver(schema) });
 
-    const displayToast = () => {
-        toast(
-            <MyCustomToast
-                title="موفقیت آمیز !"
-                msg="پیام شما ارسال شد"
-                type="success"
-            />,
-            {
-                progressClassName: "!bg-primary",
-            }
-        );
+    const displayToast = (title, msg, type) => {
+        toast(<MyCustomToast title={title} msg={msg} type={type} />, {
+            progressClassName: "!bg-primary",
+        });
     };
     // console.log(handleSubmit)
     const [formData, setFormData] = useState({
@@ -49,13 +42,29 @@ function EmailForm() {
     });
 
     const emailSubmitHandler = async () => {
-        // const res = await fetch("http://localhost:3000/api/send-email", {
-        //     method: "POST",
-        //     headers: { "Content-Type": "application/json" },
-        //     body: JSON.stringify(formData),
-        // });
-        // const data = await res.json();
-        // console.log(data)
+        try {
+            const res = await fetch("http://localhost:3000/api/send-email", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+            console.log("Response :", res);
+            if (res.status !== 200) {
+                throw new Error("هنگام ارسال ایمیل خطایی رخ داد !");
+            } else {
+                displayToast(
+                    "ارسال شد !",
+                    "پیام شما با موفقیت ارسال شد .",
+                    "success"
+                );
+            }
+        } catch (err) {
+            displayToast(
+                "خطایی رخ داد !!",
+                "هنگام ارسال پیام مشکلی پیش آمد .",
+                "error"
+            );
+        }
     };
 
     const inputChangeHandler = (e) => {
@@ -68,6 +77,7 @@ function EmailForm() {
 
     function onSubmit(data) {
         console.log("submit");
+        emailSubmitHandler();
         console.log("اطلاعات فرم:", data);
     }
 
@@ -77,6 +87,7 @@ function EmailForm() {
                 <div className="sm:grid sm:grid-cols-12 gap-4">
                     <div className="w-full flex flex-col gap-1 sm:col-span-6 mt-4 sm:mt-0">
                         <Input
+                            onChange={(e) => inputChangeHandler(e)}
                             {...register("name")}
                             label="نام :"
                             type="text"
@@ -90,6 +101,7 @@ function EmailForm() {
                     </div>
                     <div className="w-full flex flex-col gap-1 sm:col-span-6 mt-4 sm:mt-0">
                         <Input
+                            onChange={(e) => inputChangeHandler(e)}
                             {...register("email")}
                             label="ایمیل :"
                             type="email"
@@ -103,6 +115,7 @@ function EmailForm() {
                     </div>
                     <div className="w-full flex flex-col gap-1 col-span-12 mt-4 sm:mt-0">
                         <Input
+                            onChange={(e) => inputChangeHandler(e)}
                             {...register("subject")}
                             label="موضوع :"
                             type="text"
@@ -117,6 +130,7 @@ function EmailForm() {
                     </div>
                     <div className="w-full flex flex-col gap-1 sm:col-span-12 mt-4 sm:mt-0">
                         <Input
+                            onChange={(e) => inputChangeHandler(e)}
                             {...register("message")}
                             label="متن :"
                             type="textarea"

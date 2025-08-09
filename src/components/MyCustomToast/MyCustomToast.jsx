@@ -2,6 +2,7 @@
 import React from "react";
 import CrossIcon from "../icons/CrossIcon";
 import SuccessIcon from "../icons/SuccessIcon";
+import FailedIcon from "../icons/FailedIcon";
 
 function MyCustomToast({ closeToast, title, msg, type }) {
     return (
@@ -10,11 +11,19 @@ function MyCustomToast({ closeToast, title, msg, type }) {
             <div className="flex items-center justify-between mb-3">
                 {/* Status Icon */}
                 <div className="flex items-center gap-2">
-                    <SuccessIcon
-                        width={22}
-                        height={22}
-                        color={"var(--color-green-400)"}
-                    />
+                    {type === "success" ? (
+                        <SuccessIcon
+                            width={22}
+                            height={22}
+                            color={"var(--color-green-400)"}
+                        />
+                    ) : (
+                        <FailedIcon
+                            width={22}
+                            height={22}
+                            color={"var(--color-red-400)"}
+                        />
+                    )}
                     <h6 className="font-IransansWeb-Bold text-lg">{title}</h6>
                 </div>
 
