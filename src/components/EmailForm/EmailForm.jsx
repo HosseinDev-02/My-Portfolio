@@ -41,12 +41,12 @@ function EmailForm() {
         email: "",
     });
 
-    const emailSubmitHandler = async () => {
+    const emailSubmitHandler = async (data) => {
         try {
             const res = await fetch("http://localhost:3000/api/send-email", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData),
+                body: JSON.stringify(data),
             });
             console.log("Response :", res);
             if (res.status !== 200) {
@@ -69,6 +69,9 @@ function EmailForm() {
 
     const inputChangeHandler = (e) => {
         const { name, value } = e.target;
+        console.log('input :', e)
+        console.log('name :', name)
+        console.log('value :', value)
         setFormData((prevState) => ({
             ...prevState,
             [name]: value,
@@ -77,7 +80,7 @@ function EmailForm() {
 
     function onSubmit(data) {
         console.log("submit");
-        emailSubmitHandler();
+        emailSubmitHandler(data);
         console.log("اطلاعات فرم:", data);
     }
 
@@ -87,7 +90,7 @@ function EmailForm() {
                 <div className="sm:grid sm:grid-cols-12 gap-4">
                     <div className="w-full flex flex-col gap-1 sm:col-span-6 mt-4 sm:mt-0">
                         <Input
-                            onChange={(e) => inputChangeHandler(e)}
+                            onChange={inputChangeHandler}
                             {...register("name")}
                             label="نام :"
                             type="text"
@@ -101,7 +104,7 @@ function EmailForm() {
                     </div>
                     <div className="w-full flex flex-col gap-1 sm:col-span-6 mt-4 sm:mt-0">
                         <Input
-                            onChange={(e) => inputChangeHandler(e)}
+                            onChange={inputChangeHandler}
                             {...register("email")}
                             label="ایمیل :"
                             type="email"
