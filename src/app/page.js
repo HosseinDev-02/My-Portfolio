@@ -19,7 +19,6 @@ import { projects, skills, socialMediaLinks } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export default function Home() {
     return (
         <div className="">
@@ -54,10 +53,21 @@ export default function Home() {
                                     </span>
                                 </div>
                                 <p className="text-base/relaxed md:text-lg lg:max-w-120 w-full mt-10">
-                                    توسعه دهنده فرانت اند توانمند و خلاق با
-                                    انگیزه بالا برای حل چالش های فنی و بهبود
-                                    تجربه کاربری . علاقه مند به یادگیری فناوری
-                                    های جدید و ایجاد رابط های مدرن و بهینه.
+                                    توسعه دهنده فرانت اند{" "}
+                                    <span className="font-IransansWeb-Medium text-primary">
+                                        توانمند
+                                    </span>{" "}
+                                    و{" "}
+                                    <span className="font-IransansWeb-Medium text-primary">
+                                        خلاق
+                                    </span>{" "}
+                                    با انگیزه بالا برای حل چالش های فنی و بهبود
+                                    تجربه کاربری .{" "}
+                                    <span className="font-IransansWeb-Medium text-primary">
+                                        علاقه مند
+                                    </span>{" "}
+                                    به یادگیری فناوری های جدید و ایجاد رابط های
+                                    مدرن و بهینه.
                                 </p>
                                 {/* Social Media Links */}
                                 <div className="hidden sm:flex items-center gap-2 mt-8">
@@ -112,7 +122,10 @@ export default function Home() {
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                                 {/* Project Item */}
                                 {projects.map((project) => (
-                                    <ProjectItem key={project.id} {...project}/>
+                                    <ProjectItem
+                                        key={project.id}
+                                        {...project}
+                                    />
                                 ))}
                             </div>
                         </div>
@@ -164,15 +177,13 @@ export default function Home() {
                                     ازتون دریافت کنم .
                                 </p>
                                 <div className="hidden sm:flex items-center gap-2 mt-8">
-                                    {
-                                        socialMediaLinks.map(link => (
-                                            <SocialMedia key={link.id} {...link}/>
-                                        ))
-                                    }
+                                    {socialMediaLinks.map((link) => (
+                                        <SocialMedia key={link.id} {...link} />
+                                    ))}
                                 </div>
                             </div>
                             {/* Contact Us Form */}
-                            <EmailForm/>
+                            <EmailForm />
                         </div>
                     </div>
                 </section>

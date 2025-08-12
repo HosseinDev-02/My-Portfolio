@@ -62,7 +62,7 @@ function Footer() {
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
-                <div className="flex flex-wrap justify-between gap-10 mb-4 py-20">
+                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-20 pb-4">
                     {/* Footer About Me */}
                     <div className="max-w-[394px] w-full">
                         <Link
@@ -117,7 +117,7 @@ function Footer() {
                                 <span className="font-IransansWeb-Medium">
                                     تلفن :
                                 </span>
-                                <span>0993-0094-221 | 0922-734-2901</span>
+                                <span>09930094221 | 09227342901</span>
                             </div>
                             {/* Social Medias */}
                             <div className="hidden sm:flex items-center gap-2">

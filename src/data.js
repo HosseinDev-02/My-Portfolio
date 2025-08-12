@@ -117,21 +117,25 @@ const menuLinks = [
         id: 1,
         title: "درباره من",
         href: "#",
+        sectionTag: 'about-me'
     },
     {
         id: 2,
         title: "مهارت ها",
         href: "#",
+        sectionTag: 'skills'
     },
     {
         id: 3,
         title: "نمونه کارها",
         href: "#",
+        sectionTag: 'projects'
     },
     {
         id: 4,
         title: "وبلاگ",
         href: "#",
+        sectionTag: 'blogs'
     },
 ];
 
