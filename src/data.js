@@ -93,22 +93,22 @@ const socialMediaLinks = [
     {
         id: 1,
         title: "whatsapp",
-        href: "#",
-    },
-    {
-        id: 2,
-        title: "linkedin",
-        href: "#",
+        href: "https://wa.me/989227342901",
     },
     {
         id: 3,
         title: "instagram",
-        href: "#",
+        href: "https://instagram.com/hossein__ro",
     },
     {
         id: 4,
         title: "telegram",
-        href: "#",
+        href: "https://t.me/HosseinRo",
+    },
+    {
+        id: 5,
+        title: "github",
+        href: "https://github.com/HosseinDev-02",
     },
 ];
 
@@ -133,10 +133,24 @@ const menuLinks = [
     },
     {
         id: 4,
-        title: "وبلاگ",
+        title: "مقاله ها",
         href: "#",
         sectionTag: 'blogs'
     },
+    {
+        id: 5,
+        title: "تماس با من",
+        href: "#",
+        sectionTag: 'contact-me'
+    },
 ];
 
-export { skills, projects, socialMediaLinks, menuLinks };
+const menuLinkIds = [
+    'about-me',
+    'skills',
+    'projects',
+    'contact-me',
+    'blogs'
+]
+
+export { skills, projects, socialMediaLinks, menuLinks, menuLinkIds };

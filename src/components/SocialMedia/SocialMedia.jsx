@@ -4,11 +4,13 @@ import TelegramIcon from "../icons/TelegramIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import WhatsappIcon from "../icons/WhatsappIcon";
+import GithubIcon from "../icons/GithubIcon";
 
 const setSocialMediaIcon = (linkTitle) =>
     (linkTitle.includes("whatsapp") && WhatsappIcon) ||
     (linkTitle.includes("linkedin") && LinkedInIcon) ||
     (linkTitle.includes("instagram") && InstagramIcon) ||
+    (linkTitle.includes("github") && GithubIcon) ||
     (linkTitle.includes("telegram") && TelegramIcon);
 
 function SocialMedia({
@@ -21,8 +23,9 @@ function SocialMedia({
     const Icon = setSocialMediaIcon(title);
     return (
         <Link
-            className={`flex items-center justify-center rounded w-10 h-10 shadow-md bg-box transition-all duration-300 hover:text-primary ${className}`}
+            className={`flex items-center justify-center ${className}`}
             href={href}
+            target="_blank"
         >
             <Icon
                 color="currentColor"

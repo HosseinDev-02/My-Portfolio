@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -5,64 +6,19 @@ import WhatsappIcon from "../icons/WhatsappIcon";
 import LinkedInIcon from "../icons/LinkedInIcon";
 import InstagramIcon from "../icons/InstagramIcon";
 import TelegramIcon from "../icons/TelegramIcon";
+import { menuLinks, socialMediaLinks } from "@/data";
+import GithubIcon from "../icons/GithubIcon";
+import SocialMedia from "../SocialMedia/SocialMedia";
+import { scrollToSection } from "@/utils";
 
 function Footer() {
-    const fastLinks = [
-        {
-            id: 1,
-            title: "مهارت ها",
-            href: "#",
-        },
-        {
-            id: 2,
-            title: "نمونه کار ها",
-            href: "#",
-        },
-        {
-            id: 3,
-            title: "مقاله ها",
-            href: "#",
-        },
-        {
-            id: 4,
-            title: "تماس با من",
-            href: "#",
-        },
-    ];
-    const setSocialMediaIcon = (linkTitle) =>
-        (linkTitle.includes("whatsapp") && WhatsappIcon) ||
-        (linkTitle.includes("linkedin") && LinkedInIcon) ||
-        (linkTitle.includes("instagram") && InstagramIcon) ||
-        (linkTitle.includes("telegram") && TelegramIcon);
 
-    const socialMediaLinks = [
-        {
-            id: 1,
-            title: "whatsapp",
-            href: "#",
-        },
-        {
-            id: 2,
-            title: "linkedin",
-            href: "#",
-        },
-        {
-            id: 3,
-            title: "instagram",
-            href: "#",
-        },
-        {
-            id: 4,
-            title: "telegram",
-            href: "#",
-        },
-    ];
     return (
-        <div className="bg-background px-4 md:px-0">
+        <footer className="bg-background px-4 md:px-0">
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
-                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-20 pb-4">
+                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-12 md:pt-20 pb-4">
                     {/* Footer About Me */}
                     <div className="max-w-[394px] w-full">
                         <Link
@@ -89,12 +45,15 @@ function Footer() {
                             لینک سریع
                         </h5>
                         <ul className="flex flex-col items-start gap-2 font-IransansWeb-Medium">
-                            {fastLinks.map((link) => (
+                            {menuLinks.map((link) => (
                                 <li
                                     className="transition-colors duration-300 hover:text-primary before:transition-colors before:duration-300 hover:before:bg-primary relative before:absolute before:w-3 before:h-1 before:rounded before:bg-white before:right-0 pr-5 before:top-0 before:bottom-0 before:my-auto"
                                     key={link.id}
                                 >
-                                    <Link href={link.href}>{link.title}</Link>
+                                    <Link onClick={(e) => {
+                                        e.preventDefault()
+                                        scrollToSection(link.sectionTag)
+                                    }} href={link.href}>{link.title}</Link>
                                 </li>
                             ))}
                         </ul>
@@ -121,34 +80,27 @@ function Footer() {
                             </div>
                             {/* Social Medias */}
                             <div className="hidden sm:flex items-center gap-2">
-                                    {socialMediaLinks.map((link) => {
-                                        const Icon = setSocialMediaIcon(
-                                            link.title
-                                        );
-                                        return (
-                                            <Link
-                                                className="flex items-center justify-center rounded w-8 h-8"
-                                                key={link.id}
-                                                href={link.href}
-                                            >
-                                                <Icon
-                                                    color="currentColor"
-                                                    width={22}
-                                                    height={22}
-                                                />
-                                            </Link>
-                                        );
-                                    })}
-                                </div>
+                                {socialMediaLinks.map((link) => (
+                                    <SocialMedia
+                                        className="w-8 h-8"
+                                        key={link.id}
+                                        {...link}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
                 {/* Footer Copy Right */}
-                <div className="py-4 border-t border-border">
-                    <p className="font-IransansWeb-Medium">توسعه داده شده با <span className="text-primary"> ❤ </span> توسط حسین رستمی</p>
+                <div className="pt-4 pb-26 md:py-4 border-t border-border">
+                    <p className="font-IransansWeb-Medium">
+                        توسعه داده شده با{" "}
+                        <span className="text-primary"> ❤ </span> توسط حسین
+                        رستمی
+                    </p>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }
 

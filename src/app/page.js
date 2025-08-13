@@ -25,7 +25,7 @@ export default function Home() {
             <Header />
             <main className="">
                 {/* About Me */}
-                <section className="bg-section md:px-8 pt-40 md:pt-48 pb-20 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat">
+                <section id="about-me" className="bg-section md:px-8 pt-40 md:pt-48 pb-20 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat">
                     {/* Container */}
                     <div className="container">
                         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-y-16 gap-x-10">
@@ -72,7 +72,11 @@ export default function Home() {
                                 {/* Social Media Links */}
                                 <div className="hidden sm:flex items-center gap-2 mt-8">
                                     {socialMediaLinks.map((link) => (
-                                        <SocialMedia key={link.id} {...link} />
+                                        <SocialMedia
+                                            className="shadow-md bg-box transition-all duration-300 hover:text-primary w-10 h-10 rounded"
+                                            key={link.id}
+                                            {...link}
+                                        />
                                     ))}
                                 </div>
                             </div>
@@ -94,7 +98,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section className="skills pt-20 px-4 md:px-0">
+                <section id="skills" className="skills pt-20 px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Content */}
@@ -111,7 +115,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Projects */}
-                <section className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0">
+                <section id="projects" className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Projects Wrapper */}
@@ -137,7 +141,7 @@ export default function Home() {
                     {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                 </section>
                 {/* Blogs */}
-                <section className="blogs pt-20 px-4 md:px-0">
+                <section id="blogs" className="blogs pt-20 px-4 md:px-0">
                     <div className="container">
                         {/* Section Title */}
                         <SectionHeader title="مقاله های" />
@@ -148,8 +152,8 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                {/* Contact Us */}
-                <section className="contact mt-20 px-4 md:px-0 relative py-20">
+                {/* Contact Me */}
+                <section id="contact-me" className="contact mt-20 px-4 md:px-0 relative py-12 md:py-20">
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />
                     <Image
@@ -160,7 +164,7 @@ export default function Home() {
                         alt="contact-image"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
-                    <div className="container flex items-center py-20 md:py-40">
+                    <div className="container flex items-center py-16 md:py-40">
                         {/* Section Content */}
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                             {/* Contact Us Text */}
