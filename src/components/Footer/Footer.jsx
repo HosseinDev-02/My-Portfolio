@@ -69,14 +69,14 @@ function Footer() {
                                 <span className="font-IransansWeb-Medium">
                                     آدرس :
                                 </span>
-                                <span>مرکزی ، زرندیه ، مامونیه</span>
+                                <span>استان مرکزی ، شهرستان زرندیه ، شهر مامونیه</span>
                             </div>
                             {/* Phone Number */}
                             <div className="flex items-center gap-1">
                                 <span className="font-IransansWeb-Medium">
                                     تلفن :
                                 </span>
-                                <span>09930094221 | 09227342901</span>
+                                <span className="dir-ltr">+989930094221 | +989227342901</span>
                             </div>
                             {/* Social Medias */}
                             <div className="hidden sm:flex items-center gap-2">

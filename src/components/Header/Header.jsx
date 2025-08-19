@@ -13,7 +13,8 @@ import useActiveSection from "@/hooks/useActiveSection";
 function Header() {
     const [userScroll, setUserScroll] = useState(false);
     const activeSection = useActiveSection(menuLinkIds);
- 
+    console.warn("********* Refactor Mobile Menu *********");
+
     useEffect(() => {
         if (document.documentElement.scrollTop > 250) {
             setUserScroll(true);
@@ -22,23 +23,6 @@ function Header() {
         }
         window.addEventListener("scroll", (e) => {
             const scrollTop = document.documentElement.scrollTop;
-
-            // if (scrollTop > 0 && scrollTop < 655) {
-            //     setScrollSection("about-me");
-            // }
-            // if (scrollTop > 655 && scrollTop < 1306) {
-            //     setScrollSection("skills");
-            // }
-            // if (scrollTop > 1306 && scrollTop < 2717) {
-            //     setScrollSection("projects");
-            // }
-            // if (scrollTop > 2717 && scrollTop < 3317) {
-            //     setScrollSection("blogs");
-            // }
-            // if (scrollTop > 3317) {
-            //     setScrollSection("contact-me");
-            // }
-
             if (scrollTop > 250) {
                 setUserScroll(true);
             } else {
@@ -67,7 +51,7 @@ function Header() {
                         {/* <LogoIcon width="72px" height="56px" /> */}
                     </Link>
                     {/* Menu */}
-                    <ul className="hidden md:flex items-center gap-10 font-IransansWeb-Medium">
+                    <ul className="hidden md:flex items-center gap-6 lg:gap-10 font-IransansWeb-Medium">
                         {menuLinks.map((link) => (
                             <MenuLinkItem
                                 className={`${

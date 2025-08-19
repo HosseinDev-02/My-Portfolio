@@ -81,5 +81,9 @@ body {
   @apply !bg-none !bg-primary
 }
 
+.dir-ltr {
+  direction: ltr;
+}
+
 
 /* Responsive */
