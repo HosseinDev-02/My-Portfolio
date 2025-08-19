@@ -9,9 +9,13 @@ import MenuLinkItem from "../MenuLinkItem/MenuLinkItem";
 import { scrollToSection } from "@/utils";
 import ScrollHandler from "../ScrollHandler/ScrollHandler";
 import useActiveSection from "@/hooks/useActiveSection";
+import MenuIconDot from "../icons/MenuIconDot";
+import PhoneIcon from "../icons/PhoneIcon";
+import CrossIcon from "../icons/CrossIcon";
 
 function Header() {
     const [userScroll, setUserScroll] = useState(false);
+    const [showMobileMenu, setShowMobileMenu] = useState(false)
     const activeSection = useActiveSection(menuLinkIds);
     console.warn("********* Refactor Mobile Menu *********");
 
@@ -35,13 +39,23 @@ function Header() {
         <>
             <ScrollHandler />
             <header
-                className={`fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-40 bg-gradient-to-l from-background to-section md:rounded-xl transition-all duration-300 ${
+                className={`fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-50 bg-gradient-to-l from-background to-section md:rounded-xl transition-all duration-300 ${
                     userScroll
                         ? "!top-0 !left-0 !right-0 !rounded-none shadow-[0px_0px_6px_2px_rgba(0,0,0,30%)]"
                         : ""
                 }`}
             >
                 <div className="flex items-center justify-between h-20 px-3 lg:px-6">
+                    {/* Mobile Menu Button */}
+                    <span className="block md:hidden" onClick={() => setShowMobileMenu(prevState => !prevState)}>
+                        {
+                            showMobileMenu ? (
+                                <CrossIcon width={40} height={40} color="#fff" />
+                            ) : (
+                                <MenuIconDot width={40} height={40} color="#fff" />
+                            )
+                        }
+                    </span>
                     {/* Logo */}
                     <Link
                         href="#"
@@ -68,19 +82,40 @@ function Header() {
                     </ul>
                     {/* Contact Me Button */}
                     <PrimaryButton
+                        className={"hidden md:flex"}
+                        title="تماس با من"
                         onClick={() => scrollToSection("contact-me")}
-                        className={"!shrink-0"}
-                        title={"تماس با من"}
+                    />
+                    <PrimaryButton
+                        className={"md:hidden !px-4"}
+                        icon={<PhoneIcon width={24} height={24} />}
+                        onClick={() => scrollToSection("contact-me")}
                     />
                 </div>
             </header>
-            <div className="bg-box fixed bottom-0 left-0 right-0 py-8 md:hidden z-50 shadow-[0px_0px_6px_2px_rgba(0,0,0,30%)] bg-gradient-to-l from-background to-section">
-                <ul className="flex items-center justify-around">
+            {/* Mobile Menu */}
+            <div className={`block md:hidden fixed overflow-hidden top-20 z-50 right-0 left-0 transition-all duration-300 bg-background ${showMobileMenu ? 'h-[216px]' : 'h-0'}`}>
+                <ul className="flex flex-col gap-4 items-center justify-center h-full">
                     {menuLinks.map((link) => (
-                        <MenuLinkItem key={link.id} {...link} />
+                        <MenuLinkItem
+                            className={`${
+                                activeSection === link.sectionTag &&
+                                "text-primary"
+                            }`}
+                            onClick={() => {
+                                scrollToSection(link.sectionTag);
+                                setShowMobileMenu(false)
+                            }}
+                            key={link.id}
+                            {...link}
+                        />
                     ))}
                 </ul>
             </div>
+
+            {/* Show Mobile Menu Overlay */}
+            
+            <div className={`fixed block md:hidden inset-0 w-full h-full transition-all duration-300 bg-background/50 z-[40] ${showMobileMenu ? 'opacity-100 visible' : 'opacity-0 invisible'}`}></div>
         </>
     );
 }
