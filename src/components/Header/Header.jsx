@@ -15,9 +15,8 @@ import CrossIcon from "../icons/CrossIcon";
 
 function Header() {
     const [userScroll, setUserScroll] = useState(false);
-    const [showMobileMenu, setShowMobileMenu] = useState(false)
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
     const activeSection = useActiveSection(menuLinkIds);
-    console.warn("********* Refactor Mobile Menu *********");
 
     useEffect(() => {
         if (document.documentElement.scrollTop > 250) {
@@ -47,14 +46,17 @@ function Header() {
             >
                 <div className="flex items-center justify-between h-20 px-3 lg:px-6">
                     {/* Mobile Menu Button */}
-                    <span className="block md:hidden" onClick={() => setShowMobileMenu(prevState => !prevState)}>
-                        {
-                            showMobileMenu ? (
-                                <CrossIcon width={40} height={40} color="#fff" />
-                            ) : (
-                                <MenuIconDot width={40} height={40} color="#fff" />
-                            )
+                    <span
+                        className="block md:hidden"
+                        onClick={() =>
+                            setShowMobileMenu((prevState) => !prevState)
                         }
+                    >
+                        {showMobileMenu ? (
+                            <CrossIcon width={40} height={40} color="#fff" />
+                        ) : (
+                            <MenuIconDot width={40} height={40} color="#fff" />
+                        )}
                     </span>
                     {/* Logo */}
                     <Link
@@ -94,7 +96,11 @@ function Header() {
                 </div>
             </header>
             {/* Mobile Menu */}
-            <div className={`block md:hidden fixed overflow-hidden top-20 z-50 right-0 left-0 transition-all duration-300 bg-background ${showMobileMenu ? 'h-[216px]' : 'h-0'}`}>
+            <div
+                className={`block md:hidden fixed overflow-hidden top-20 z-50 right-0 left-0 transition-all duration-300 bg-background ${
+                    showMobileMenu ? "h-[216px]" : "h-0"
+                }`}
+            >
                 <ul className="flex flex-col gap-4 items-center justify-center h-full">
                     {menuLinks.map((link) => (
                         <MenuLinkItem
@@ -104,7 +110,7 @@ function Header() {
                             }`}
                             onClick={() => {
                                 scrollToSection(link.sectionTag);
-                                setShowMobileMenu(false)
+                                setShowMobileMenu(false);
                             }}
                             key={link.id}
                             {...link}
@@ -114,8 +120,19 @@ function Header() {
             </div>
 
             {/* Show Mobile Menu Overlay */}
-            
-            <div className={`fixed block md:hidden inset-0 w-full h-full transition-all duration-300 bg-background/50 z-[40] ${showMobileMenu ? 'opacity-100 visible' : 'opacity-0 invisible'}`}></div>
+
+            <div
+                onClick={() => {
+                    if (showMobileMenu) {
+                        setShowMobileMenu(false);
+                    }
+                }}
+                className={`fixed block md:hidden inset-0 w-full h-full transition-all duration-300 bg-background/50 z-[40] ${
+                    showMobileMenu
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible"
+                }`}
+            ></div>
         </>
     );
 }

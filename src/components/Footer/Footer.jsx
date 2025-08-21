@@ -2,12 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import WhatsappIcon from "../icons/WhatsappIcon";
-import LinkedInIcon from "../icons/LinkedInIcon";
-import InstagramIcon from "../icons/InstagramIcon";
-import TelegramIcon from "../icons/TelegramIcon";
 import { menuLinks, socialMediaLinks } from "@/data";
-import GithubIcon from "../icons/GithubIcon";
 import SocialMedia from "../SocialMedia/SocialMedia";
 import { scrollToSection } from "@/utils";
 
@@ -92,7 +87,7 @@ function Footer() {
                     </div>
                 </div>
                 {/* Footer Copy Right */}
-                <div className="pt-4 pb-26 md:py-4 border-t border-border">
+                <div className="py-4 border-t border-border">
                     <p className="font-IransansWeb-Medium">
                         توسعه داده شده با{" "}
                         <span className="text-primary"> ❤ </span> توسط حسین

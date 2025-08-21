@@ -20,12 +20,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+    console.warn("codding soft skills section");
     return (
         <div className="">
             <Header />
             <main className="">
                 {/* About Me */}
-                <section id="about-me" className="bg-section md:px-8 pt-40 md:pt-48 pb-20 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat">
+                <section
+                    id="about-me"
+                    className="bg-section md:px-8 pt-40 md:pt-48 pb-20 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat"
+                >
                     {/* Container */}
                     <div className="container">
                         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-y-16 gap-x-10">
@@ -105,17 +109,32 @@ export default function Home() {
                         <div>
                             <SectionHeader title="مهارت های" />
                             {/* Skills Content Wrapper */}
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {/* Skill Item */}
-                                {skills.map((skill) => (
-                                    <SkillItem key={skill.id} {...skill} />
-                                ))}
+                            <div className="">
+                                {/* Hard Skills */}
+                                <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
+                                    <h6 className="font-IransansWeb-Bold text-xl">
+                                        مهارت های{" "}
+                                        <span className="text-primary">
+                                            سخت
+                                        </span>
+                                    </h6>
+                                </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                    {/* Skill Item */}
+                                    {skills.map((skill) => (
+                                        <SkillItem key={skill.id} {...skill} />
+                                    ))}
+                                </div>
+                                {/* Soft Skills */}
                             </div>
                         </div>
                     </div>
                 </section>
                 {/* Projects */}
-                <section id="projects" className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0">
+                <section
+                    id="projects"
+                    className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0"
+                >
                     {/* Container */}
                     <div className="container">
                         {/* Projects Wrapper */}
@@ -153,7 +172,10 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Contact Me */}
-                <section id="contact-me" className="contact mt-20 px-4 md:px-0 relative py-12 md:py-20">
+                <section
+                    id="contact-me"
+                    className="contact mt-20 px-4 md:px-0 relative py-12 md:py-20"
+                >
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />
                     <Image
