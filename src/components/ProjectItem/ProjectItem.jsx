@@ -52,7 +52,7 @@ function ProjectItem({ image, title, href, description, skills, github }) {
                             سورس کد پروژه :
                         </span>
                         <Link
-                            href={href}
+                            href={github}
                             target="_blank"
                             className="font-IransansWeb-Medium transition-colors duration-300 hover:text-primary dir-ltr"
                         >

@@ -62,7 +62,7 @@ function SkillItem({ title, percent, id, count }) {
                                 تازه کار
                             </span>
                         ) : (
-                            <span className="absolute left-0 font-IransansWeb-Medium text-sm -top-6">
+                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-6">
                                 {count} سال تجربه
                             </span>
                         )}
