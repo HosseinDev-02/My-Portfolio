@@ -112,14 +112,14 @@ export default function Home() {
                             {/* Skills Content Wrapper */}
                             <div className="">
                                 {/* Hard Skills */}
-                                <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
+                                {/* <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
                                     <h6 className="font-IransansWeb-Bold text-xl">
                                         مهارت های{" "}
                                         <span className="text-primary">
                                             سخت
                                         </span>
                                     </h6>
-                                </div>
+                                </div> */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {/* Skill Item */}
                                     {skills.map((skill) => (

@@ -58,11 +58,11 @@ function SkillItem({ title, percent, id, count }) {
                 >
                     <>
                         {count === 0 ? (
-                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-6">
+                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-7">
                                 تازه کار
                             </span>
                         ) : (
-                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-6">
+                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-7">
                                 {count} سال تجربه
                             </span>
                         )}
