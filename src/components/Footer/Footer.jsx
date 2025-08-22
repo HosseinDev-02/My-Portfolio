@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -7,7 +7,6 @@ import SocialMedia from "../SocialMedia/SocialMedia";
 import { scrollToSection } from "@/utils";
 
 function Footer() {
-
     return (
         <footer className="bg-background px-4 md:px-0">
             {/* Footer Container */}
@@ -45,10 +44,15 @@ function Footer() {
                                     className="transition-colors duration-300 hover:text-primary before:transition-colors before:duration-300 hover:before:bg-primary relative before:absolute before:w-3 before:h-1 before:rounded before:bg-white before:right-0 pr-5 before:top-0 before:bottom-0 before:my-auto"
                                     key={link.id}
                                 >
-                                    <Link onClick={(e) => {
-                                        e.preventDefault()
-                                        scrollToSection(link.sectionTag)
-                                    }} href={link.href}>{link.title}</Link>
+                                    <Link
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            scrollToSection(link.sectionTag);
+                                        }}
+                                        href={link.href}
+                                    >
+                                        {link.title}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
@@ -64,14 +68,30 @@ function Footer() {
                                 <span className="font-IransansWeb-Medium">
                                     آدرس :
                                 </span>
-                                <span>استان مرکزی ، شهرستان زرندیه ، شهر مامونیه</span>
+                                <span>
+                                    استان مرکزی ، شهرستان زرندیه ، شهر مامونیه
+                                </span>
                             </div>
                             {/* Phone Number */}
                             <div className="flex items-center gap-1">
                                 <span className="font-IransansWeb-Medium">
                                     تلفن :
                                 </span>
-                                <span className="dir-ltr">+989930094221 | +989227342901</span>
+                                <span className="dir-ltr">
+                                    +989930094221 | +989227342901
+                                </span>
+                            </div>
+                            {/* Email */}
+                            <div className="flex items-center gap-1">
+                                <span className="font-IransansWeb-Medium">
+                                    ایمیل :
+                                </span>
+                                <a
+                                    href="mailto:rostamidev2002@gmail.com"
+                                    className="dir-ltr"
+                                >
+                                    Rostamidev2002@gmail.com
+                                </a>
                             </div>
                             {/* Social Medias */}
                             <div className="hidden sm:flex items-center gap-2">
