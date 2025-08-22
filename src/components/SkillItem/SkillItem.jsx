@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import GitIcon from "../icons/brands/GitIcon";
 import ReactIcon from "../icons/brands/ReactIcon";
@@ -23,19 +23,23 @@ const skillIcons = {
     Typescript: TypescriptIcon,
     Github: GithubIcon,
     TailwindCss: TailwindCssIcon,
-    Regex: RegexIcon
+    Regex: RegexIcon,
 };
 
 const setStyleToIcons = {
-    Github: '#fff',
-    "Next Js": '#fff'
-}
+    Github: "#fff",
+    "Next Js": "#fff",
+};
 
-function SkillItem({ title, percent, id }) {
+function SkillItem({ title, percent, id, count }) {
     const Icon = skillIcons[title];
-    const style = setStyleToIcons[title]
+    const style = setStyleToIcons[title];
     return (
-        <div className={`bg-section rounded-lg p-3 ${id === 10 && 'md:col-start-2'}`}>
+        <div
+            className={`bg-section rounded-lg p-3 ${
+                id === 10 && "md:col-start-2"
+            }`}
+        >
             {/* Statistic */}
             <div className="flex items-center justify-between pb-4">
                 {/* Text */}
@@ -52,9 +56,17 @@ function SkillItem({ title, percent, id }) {
                     }}
                     className="relative bg-primary h-2.5 rounded-2xl"
                 >
-                    <span className="absolute left-0 font-IransansWeb-Medium text-sm -top-6">
-                        {percent}%
-                    </span>
+                    <>
+                        {count === 0 ? (
+                            <span className="absolute -left-4 font-IransansWeb-Medium text-sm -top-6">
+                                تازه کار
+                            </span>
+                        ) : (
+                            <span className="absolute left-0 font-IransansWeb-Medium text-sm -top-6">
+                                {count} سال تجربه
+                            </span>
+                        )}
+                    </>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import Input from "@/components/Input/Input";
 import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
 import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
+import BlogsSection from "@/components/Sections/BlogsSection";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
@@ -160,17 +161,10 @@ export default function Home() {
                     {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                 </section>
                 {/* Blogs */}
-                <section id="blogs" className="blogs pt-20 px-4 md:px-0">
-                    <div className="container">
-                        {/* Section Title */}
-                        <SectionHeader title="مقاله های" />
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                            <BlogItem />
-                            <BlogItem />
-                            <BlogItem />
-                        </div>
-                    </div>
-                </section>
+                {/* تکمیل نشده ... */}
+
+                {/* <BlogsSection /> */}
+
                 {/* Contact Me */}
                 <section
                     id="contact-me"
