@@ -64,18 +64,16 @@ function Footer() {
                         </h5>
                         <div className="flex flex-col gap-2">
                             {/* Address */}
-                            <div className="flex items-center gap-1">
+                            <div className="">
                                 <span className="font-IransansWeb-Medium">
-                                    آدرس :
+                                    آدرس : {" "}
                                 </span>
-                                <span>
-                                    استان مرکزی ، شهرستان زرندیه ، شهر مامونیه
-                                </span>
+                                استان مرکزی ، شهرستان زرندیه ، شهر مامونیه
                             </div>
                             {/* Phone Number */}
-                            <div className="flex items-center gap-1">
+                            <div className="">
                                 <span className="font-IransansWeb-Medium">
-                                    تلفن :
+                                تلفن : {" "}
                                 </span>
                                 <span className="dir-ltr">
                                     +989930094221 | +989227342901
@@ -97,7 +95,7 @@ function Footer() {
                             <div className="flex items-center gap-2">
                                 {socialMediaLinks.map((link) => (
                                     <SocialMedia
-                                        className="w-8 h-8"
+                                        className="w-6 h-6 md:w-8 md:h-8"
                                         key={link.id}
                                         {...link}
                                     />

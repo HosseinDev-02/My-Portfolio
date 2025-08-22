@@ -140,13 +140,7 @@ const menuLinks = [
         id: 3,
         title: "نمونه کارها",
         href: "#",
-        sectionTag: "projects",
-    },
-    {
-        id: 4,
-        title: "مقاله ها",
-        href: "#",
-        sectionTag: "blogs",
+        sectionTag: "my-projects",
     },
     {
         id: 5,
@@ -156,6 +150,6 @@ const menuLinks = [
     },
 ];
 
-const menuLinkIds = ["about-me", "skills", "projects", "contact-me", "blogs"];
+const menuLinkIds = ["about-me", "skills", "my-projects", "contact-me"];
 
 export { skills, projects, socialMediaLinks, menuLinks, menuLinkIds };

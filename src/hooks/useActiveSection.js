@@ -8,16 +8,19 @@ export default function useActiveSection(sectionIds) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          console.log(entry.target.id)
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
-      { threshold: 0.6 } // ۶۰٪ از سکشن دیده بشه
+      { threshold: 0.3, rootMargin: "0px 0px -20% 0px" } // ۶۰٪ از سکشن دیده بشه
     );
 
     sectionIds.forEach((id) => {
+      console.log(id)
       const element = document.getElementById(id);
+      console.log('element :', element)
       if (element) observer.observe(element);
     });
 

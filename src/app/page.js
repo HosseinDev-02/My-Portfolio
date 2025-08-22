@@ -133,7 +133,7 @@ export default function Home() {
                 </section>
                 {/* Projects */}
                 <section
-                    id="projects"
+                    id="my-projects"
                     className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0"
                 >
                     {/* Container */}

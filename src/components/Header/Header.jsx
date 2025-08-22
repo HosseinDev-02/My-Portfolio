@@ -19,6 +19,10 @@ function Header() {
     const activeSection = useActiveSection(menuLinkIds);
 
     useEffect(() => {
+        console.log('active section :', activeSection)
+    }, [activeSection])
+
+    useEffect(() => {
         if (document.documentElement.scrollTop > 250) {
             setUserScroll(true);
         } else {
