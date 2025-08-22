@@ -3,61 +3,61 @@ const skills = [
         id: 1,
         title: "HTML",
         percent: 40,
-        count: 2
+        count: 2,
     },
     {
         id: 2,
         title: "CSS",
         percent: 40,
-        count: 2
+        count: 2,
     },
     {
         id: 3,
         title: "Javascript",
         percent: 40,
-        count: 2
+        count: 2,
     },
     {
         id: 4,
         title: "TailwindCss",
         percent: 40,
-        count: 2
+        count: 2,
     },
     {
         id: 5,
         title: "React",
         percent: 30,
-        count: 1.5
+        count: 1.5,
     },
     {
         id: 6,
         title: "Next Js",
         percent: 10,
-        count: 0
+        count: 0,
     },
     {
         id: 7,
         title: "Typescript",
         percent: 10,
-        count: 0
+        count: 0,
     },
     {
         id: 8,
         title: "Regex",
         percent: 40,
-        count: 2
+        count: 2,
     },
     {
         id: 9,
         title: "Git",
         percent: 20,
-        count: 1
+        count: 1,
     },
     {
         id: 10,
         title: "Github",
         percent: 20,
-        count: 1
+        count: 1,
     },
 ];
 
@@ -65,37 +65,38 @@ const projects = [
     {
         id: 1,
         title: "داشبورد مدیریتی",
-        description: `
-        برای مدیریت و نگهداری مشاغل مختلف مناسب Frest پنل مدیریت
-        است.
-        توسعه داده شده است. Tailwind و React با استفاده از
-    `,
+        description: `پنل مدیریتی طراحی‌شده با React و Tailwind CSS با رابط کاربری مدرن، واکنش‌گرا و کاربرپسند. شامل مدیریت داده‌ها، جداول و بخش‌های مختلف سیستم.`,
         href: "https://frest-dashboard.vercel.app",
-        image: "/images/projects/frest-dashboard.png"
+        image: "/images/projects/frest-dashboard.png",
+        skills: ["React Js", "Tailwind Css"],
+        github: 'https://github.com/HosseinDev-02/frest-dashboard'
     },
     {
         id: 2,
         title: "سایت شرکتی",
-        description: `لندریک یک سایت شرکتی است و دارای صفحات مختلفی است .
-        توسعه داده شده است. React ، Tailwind با استفاده`,
+        description: `وب‌سایت شرکتی ساخته‌شده با React و Tailwind CSS با طراحی مدرن و واکنش‌گرا، مناسب برای معرفی خدمات و نمایش اطلاعات سازمانی.`,
         href: "https://landrick-neon.vercel.app",
-        image: "/images/projects/landrick-index-dark-theme.png"
+        image: "/images/projects/landrick-index-dark-theme.png",
+        skills: ["React Js", "Tailwind Css"],
+        github: 'https://github.com/HosseinDev-02/landrick'
     },
     {
         id: 3,
         title: "سایت آموزشی",
-        description: `یک سایت آموزش برنامه نویسی است.
-        توسعه داده شده است . React , Tailwind با استفاده از`,
+        description: `وب‌سایت آموزشی در حوزه برنامه‌نویسی، توسعه‌یافته با React و Tailwind CSS. دارای طراحی مدرن، واکنش‌گرا و مناسب برای ارائه‌ی محتوای آموزشی و منابع یادگیری.`,
         href: "https://programming-learning-site.vercel.app",
-        image: "/images/projects/nabeghe-academy-index-dark-theme.png"
+        image: "/images/projects/nabeghe-academy-index-dark-theme.png",
+        skills: ["React Js", "Tailwind Css"],
+        github: 'https://github.com/HosseinDev-02/Programming-Learning-Site'
     },
     {
         id: 4,
         title: "سایت فروشگاهی",
-        description: `سایت فروش لوازم جانبی لپ تاپ و کامپیوتر .
-        توسعه داده شده است . HTML , CSS , JavaScript با استفاده ا`,
+        description: `وب‌سایت فروشگاهی لپ‌تاپ و لوازم جانبی، اولین پروژه بزرگ من پس از یادگیری JavaScript. توسعه‌یافته با HTML، Tailwind CSS و JavaScript با طراحی واکنش‌گرا و کاربرپسند.`,
         href: "https://digi-mode.vercel.app",
-        image: "/images/projects/digimode-index.png"
+        image: "/images/projects/digimode-index.png",
+        skills: ["HTML", "Tailwind Css", "Javascript"],
+        github: 'https://github.com/HosseinDev-02/Digi-Mode'
     },
 ];
 
@@ -127,40 +128,34 @@ const menuLinks = [
         id: 1,
         title: "درباره من",
         href: "#",
-        sectionTag: 'about-me'
+        sectionTag: "about-me",
     },
     {
         id: 2,
         title: "مهارت ها",
         href: "#",
-        sectionTag: 'skills'
+        sectionTag: "skills",
     },
     {
         id: 3,
         title: "نمونه کارها",
         href: "#",
-        sectionTag: 'projects'
+        sectionTag: "projects",
     },
     {
         id: 4,
         title: "مقاله ها",
         href: "#",
-        sectionTag: 'blogs'
+        sectionTag: "blogs",
     },
     {
         id: 5,
         title: "تماس با من",
         href: "#",
-        sectionTag: 'contact-me'
+        sectionTag: "contact-me",
     },
 ];
 
-const menuLinkIds = [
-    'about-me',
-    'skills',
-    'projects',
-    'contact-me',
-    'blogs'
-]
+const menuLinkIds = ["about-me", "skills", "projects", "contact-me", "blogs"];
 
 export { skills, projects, socialMediaLinks, menuLinks, menuLinkIds };
