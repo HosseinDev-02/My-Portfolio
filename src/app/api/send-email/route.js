@@ -36,10 +36,9 @@ export async function POST(req) {
         await transporter.sendMail(mailOptions);
         return Response.json({ message: "پیام با موفقیت ارسال شد" });
     } catch (err) {
-        console.error("خطا در ارسال ایمیل:", err); // لاگ دقیق‌تر
-        return Response.json(
-            { message: "خطا در ارسال ایمیل", error: err.message },
-            { status: 500 }
-        );
+        console.error("EMAIL ERROR:", err);
+        return res
+            .status(500)
+            .json({ message: "خطا در ارسال ایمیل", error: err.toString() });
     }
 }
