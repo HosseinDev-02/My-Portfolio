@@ -196,7 +196,7 @@ export default function Home() {
                                     فقط می خواهید سلامی بفرستید خوشحال میشم
                                     ازتون دریافت کنم .
                                 </p>
-                                <div className="flex justify-center md:justify-start items-center gap-2 mt-8">
+                                <div className="flex items-center gap-2 mt-8">
                                     {socialMediaLinks.map((link) => (
                                         <SocialMedia key={link.id} {...link} />
                                     ))}
