@@ -94,7 +94,7 @@ function Footer() {
                                 </a>
                             </div>
                             {/* Social Medias */}
-                            <div className="hidden sm:flex items-center gap-2">
+                            <div className="flex justify-center md:justify-start items-center gap-2">
                                 {socialMediaLinks.map((link) => (
                                     <SocialMedia
                                         className="w-8 h-8"
