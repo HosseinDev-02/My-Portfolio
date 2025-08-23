@@ -103,7 +103,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section id="skills" className="skills pt-20 px-4 md:px-0">
+                <section id="skills" className="skills mt-20 px-4 md:px-0">
                     {/* Container */}
                     <div className="container">
                         {/* Content */}
@@ -134,7 +134,7 @@ export default function Home() {
                 {/* Projects */}
                 <section
                     id="my-projects"
-                    className="projects pt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0"
+                    className="projects mt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0"
                 >
                     {/* Container */}
                     <div className="container">
