@@ -26,6 +26,7 @@ function EmailForm() {
         register,
         handleSubmit,
         formState: { errors },
+        reset,
     } = useForm({ resolver: yupResolver(schema) });
 
     const displayToast = (title, msg, type) => {
@@ -57,6 +58,7 @@ function EmailForm() {
                     "پیام شما با موفقیت ارسال شد .",
                     "success"
                 );
+                reset();
             }
         } catch (err) {
             displayToast(
@@ -64,14 +66,15 @@ function EmailForm() {
                 "هنگام ارسال پیام مشکلی پیش آمد .",
                 "error"
             );
+            reset();
         }
     };
 
     const inputChangeHandler = (e) => {
         const { name, value } = e.target;
-        console.log('input :', e)
-        console.log('name :', name)
-        console.log('value :', value)
+        console.log("input :", e);
+        console.log("name :", name);
+        console.log("value :", value);
         setFormData((prevState) => ({
             ...prevState,
             [name]: value,

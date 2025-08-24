@@ -29,7 +29,7 @@ export default function Home() {
                 {/* About Me */}
                 <section
                     id="about-me"
-                    className="bg-section md:px-8 pt-40 md:pt-48 pb-20 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat"
+                    className="bg-section md:px-8 py-36 md:py-48 relative overflow-hidden bg-[url(/images/about-me.svg)] bg-center bg-cover bg-no-repeat"
                 >
                     {/* Container */}
                     <div className="container">
@@ -103,7 +103,10 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section id="skills" className="skills mt-20 px-4 md:px-0">
+                <section
+                    id="skills"
+                    className="skills mt-20 md:mt-40 px-4 md:px-0"
+                >
                     {/* Container */}
                     <div className="container">
                         {/* Content */}
@@ -134,7 +137,7 @@ export default function Home() {
                 {/* Projects */}
                 <section
                     id="my-projects"
-                    className="projects mt-20 relative bg-[url(/images/projects-shape-3.svg)] bg-center bg-cover bg-no-repeat px-4 md:px-0"
+                    className="projects mt-20 md:mt-40 relative px-4 md:px-0"
                 >
                     {/* Container */}
                     <div className="container">
@@ -168,7 +171,7 @@ export default function Home() {
                 {/* Contact Me */}
                 <section
                     id="contact-me"
-                    className="contact mt-20 px-4 md:px-0 relative py-12 md:py-20"
+                    className="contact mt-20 md:mt-40 px-4 md:px-0 relative py-12 md:py-20"
                 >
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />

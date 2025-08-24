@@ -1,8 +1,17 @@
 import React from "react";
 
 function Input(props) {
-    const { name, id, type, className, placeholder, label, onChange, required } =
-        props;
+    const {
+        name,
+        id,
+        type,
+        className,
+        placeholder,
+        label,
+        onChange,
+        required,
+        defaultValue,
+    } = props;
     return (
         <>
             {(type !== "textarea" && (
@@ -17,6 +26,7 @@ function Input(props) {
                     )}
                     <input
                         {...props}
+                        defaultValue={defaultValue}
                         onChange={onChange}
                         className="border border-border transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary font-IransansWeb-Medium placeholder:text-sm w-full outline-none rounded-md px-2 h-10"
                         placeholder={placeholder}
@@ -36,6 +46,7 @@ function Input(props) {
                             </span>
                         )}
                         <textarea
+                            defaultValue={defaultValue}
                             {...props}
                             onChange={onChange}
                             placeholder={placeholder || ""}
