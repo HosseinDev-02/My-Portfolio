@@ -36,29 +36,36 @@ export default function Home() {
                         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-y-16 gap-x-10">
                             {/* About Me Content */}
                             <div className="px-4 md:px-0 text-center lg:text-right basis-1/2">
-                                <div className="text-primary font-IransansWeb-Bold leading-snug text-4xl md:text-5xl flex flex-col items-center justify-center lg:justify-start lg:items-start gap-px lg:max-w-100 w-full">
-                                    <span className="text-caption text-2xl">
-                                        درود🖐
+                                <div className="font-IransansWeb-Bold leading-snug text-4xl md:text-5xl lg:justify-start lg:items-start gap-px lg:max-w-100 w-full">
+                                    <span className="text-2xl">سلام 🖐</span>{" "}
+                                    <br />{" "}
+                                    <span className="text-caption">
+                                        من حسین رستمی هستم
+                                    </span>{" "}
+                                    ،{" "}
+                                    <span className="font-IransansWeb-Black text-primary">
+                                        توسعه دهنده فرانت اند
+                                    </span>
+                                    {/* <span className="text-caption text-2xl">
+                                        سلام 🖐
                                     </span>
                                     <div className="text-caption">
-                                        حسین رستمی
+                                        من حسین رستمی هستم
                                         <span className="text-2xl"> ، </span>
                                     </div>
                                     <div className="font-IransansWeb-Black">
-                                        برنامه نویس
-                                        <span className="text-2xl text-caption">
-                                            {" "}
-                                            و{" "}
-                                        </span>
                                         توسعه دهنده فرانت اند
-                                    </div>
-                                    <span className="text-caption text-2xl">
-                                        هستم
-                                        <span className="text-2xl"> . </span>
-                                    </span>
+                                    </div> */}
                                 </div>
                                 <p className="text-base/relaxed md:text-lg lg:max-w-120 w-full mt-10">
-                                    توسعه دهنده فرانت اند{" "}
+                                    با علاقه‌مندی ویژه به طراحی و پیاده‌سازی
+                                    رابط‌های کاربری مدرن و کاربرپسند. هدف من ایجاد
+                                    وب‌سایت‌هایی سریع، بهینه و ساده برای
+                                    استفاده‌ی کاربران است. من به یادگیری مداوم،
+                                    حل چالش‌های جدید و ارتقای مهارت‌هام علاقه
+                                    دارم و همیشه تلاش می‌کنم در هر پروژه‌ای
+                                    بهترین نتیجه رو ارائه بدم.
+                                    {/* توسعه دهنده فرانت اند{" "}
                                     <span className="font-IransansWeb-Medium text-primary">
                                         توانمند
                                     </span>{" "}
@@ -72,7 +79,7 @@ export default function Home() {
                                         علاقه مند
                                     </span>{" "}
                                     به یادگیری فناوری های جدید و ایجاد رابط های
-                                    مدرن و بهینه.
+                                    مدرن و بهینه. */}
                                 </p>
                                 {/* Social Media Links */}
                                 <div className="flex justify-center sm:justify-start items-center gap-2 mt-8">
