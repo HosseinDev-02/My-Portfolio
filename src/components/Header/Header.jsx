@@ -12,6 +12,7 @@ import useActiveSection from "@/hooks/useActiveSection";
 import MenuIconDot from "../icons/MenuIconDot";
 import PhoneIcon from "../icons/PhoneIcon";
 import CrossIcon from "../icons/CrossIcon";
+import DownloadIcon from "../icons/DownloadIcon";
 
 function Header() {
     const [userScroll, setUserScroll] = useState(false);
@@ -89,13 +90,15 @@ function Header() {
                     {/* Contact Me Button */}
                     <PrimaryButton
                         className={"hidden md:flex"}
-                        title="تماس با من"
-                        onClick={() => scrollToSection("contact-me")}
+                        title="دانلود رزومه"
+                        href={'/hossein_rostami.pdf'}
+                        download='Hossein-Rostami-Resume.pdf'
                     />
                     <PrimaryButton
                         className={"md:hidden !px-4"}
-                        icon={<PhoneIcon width={24} height={24} />}
-                        onClick={() => scrollToSection("contact-me")}
+                        icon={<DownloadIcon width={24} height={24}/>}
+                        href={"/hossein_rostami.pdf"}
+                        download="Hossein-Rostami-Resume.pdf"
                     />
                 </div>
             </header>
