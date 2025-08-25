@@ -63,7 +63,7 @@ function Footer() {
                     {/* Footer Contact Info */}
                     <div className="">
                         <h5 className="font-IransansWeb-Bold text-lg mb-6 text-white">
-                            تماس با من
+                            اطلاعات تماس
                         </h5>
                         <div className="flex flex-col gap-2">
                             {/* Address */}

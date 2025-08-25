@@ -101,7 +101,7 @@ export default function Home() {
                                             alt="hossein rostami"
                                             fill
                                             objectFit="cover"
-                                            src="/images/me-2.png"
+                                            src="/images/me-2.webp"
                                         />
                                     </div>
                                 </div>
