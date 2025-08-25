@@ -34,24 +34,25 @@ function Footer() {
                         </p>
                     </div>
                     {/* Footer Fast Links */}
-                    <div className="">
+                    <div className="max-w-[110px] w-full">
                         <h5 className="font-IransansWeb-Bold text-lg mb-6 text-white">
                             لینک سریع
                         </h5>
-                        <ul className="flex flex-col items-start gap-2 font-IransansWeb-Medium">
+                        <ul className="flex flex-col gap-2 font-IransansWeb-Medium">
                             {menuLinks.map((link) => (
-                                <li
-                                    className="transition-colors duration-300 hover:text-primary before:transition-colors before:duration-300 hover:before:bg-primary relative before:absolute before:w-3 before:h-1 before:rounded before:bg-white before:right-0 pr-5 before:top-0 before:bottom-0 before:my-auto"
-                                    key={link.id}
-                                >
+                                <li key={link.id}>
                                     <Link
                                         onClick={(e) => {
                                             e.preventDefault();
                                             scrollToSection(link.sectionTag);
                                         }}
                                         href={link.href}
+                                        className="flex items-center gap-2 group"
                                     >
-                                        {link.title}
+                                        <span className="w-1.5 h-1.5 rounded-full bg-white transition-all duration-300 md:group-hover:w-6 md:group-hover:bg-primary"></span>
+                                        <span className="md:group-hover:text-primary transition-colors duration-300">
+                                            {link.title}
+                                        </span>
                                     </Link>
                                 </li>
                             ))}
@@ -66,14 +67,14 @@ function Footer() {
                             {/* Address */}
                             <div className="">
                                 <span className="font-IransansWeb-Medium">
-                                    آدرس : {" "}
+                                    آدرس :{" "}
                                 </span>
                                 استان مرکزی ، شهرستان زرندیه ، شهر مامونیه
                             </div>
                             {/* Phone Number */}
                             <div className="">
                                 <span className="font-IransansWeb-Medium">
-                                تلفن : {" "}
+                                    تلفن :{" "}
                                 </span>
                                 <span className="dir-ltr">
                                     +989930094221 | +989227342901
