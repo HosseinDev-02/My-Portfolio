@@ -17,7 +17,7 @@ function Footer() {
                     <div className="max-w-[394px] w-full">
                         <Link
                             href="#"
-                            className="block font-HerrVonMuellerhoff-Regular text-4xl relative h-14 w-18 mb-6"
+                            className="block font-HerrVonMuellerhoff-Regular text-4xl relative h-14 w-18 mb-1"
                         >
                             <Image
                                 alt="logo"
@@ -37,7 +37,7 @@ function Footer() {
                     </div>
                     {/* Footer Fast Links */}
                     <div className="max-w-[110px] w-full">
-                        <h5 className="font-IransansWeb-Bold text-lg mb-6 text-white">
+                        <h5 className="font-IransansWeb-Bold text-lg mb-8 text-white">
                             لینک سریع
                         </h5>
                         <ul className="flex flex-col gap-2 font-IransansWeb-Medium">
@@ -62,7 +62,7 @@ function Footer() {
                     </div>
                     {/* Footer Contact Info */}
                     <div className="">
-                        <h5 className="font-IransansWeb-Bold text-lg mb-6 text-white">
+                        <h5 className="font-IransansWeb-Bold text-lg mb-8 text-white">
                             اطلاعات تماس
                         </h5>
                         <div className="flex flex-col gap-2">
