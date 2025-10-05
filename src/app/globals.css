@@ -17,7 +17,8 @@
   --color-box: #1a1a1a;
   --color-section: #181818;
   --color-footer: #1C1C21;
-  --color-border: #61616B;
+  --color-border: #222222;
+  --color-input-border: #565656;
 
   /* Breakpoints */
   --breakpoint-*: initial;

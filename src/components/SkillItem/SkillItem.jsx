@@ -36,7 +36,7 @@ function SkillItem({ title, percent, id, count }) {
     const style = setStyleToIcons[title];
     return (
         <div
-            className={`bg-section rounded-lg p-3 ${
+            className={`bg-section border-2 border-border rounded-lg p-3 ${
                 id === 10 && "md:col-start-2"
             }`}
         >

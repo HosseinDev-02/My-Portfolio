@@ -71,7 +71,7 @@ function ProjectItem({ image, title, href, description, skills, github }) {
                 <Link
                     href={href}
                     target="_blank"
-                    className="group flex items-center justify-center rounded-md border-border transition-all duration-300 hover:bg-white hover:border-white hover:text-background border w-10 h-10"
+                    className="group flex items-center justify-center rounded-md border-input-border transition-all duration-300 hover:bg-white hover:border-white hover:text-background border w-10 h-10"
                 >
                     <ArrowLeftUpIcon
                         className="hover:-rotate-45 transition-all duration-300"

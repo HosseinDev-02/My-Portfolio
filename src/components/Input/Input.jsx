@@ -28,7 +28,7 @@ function Input(props) {
                         {...props}
                         defaultValue={defaultValue}
                         onChange={onChange}
-                        className="border border-border transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary font-IransansWeb-Medium placeholder:text-sm w-full outline-none rounded-md px-2 h-10"
+                        className="border border-input-border transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary font-IransansWeb-Medium placeholder:text-sm w-full outline-none rounded-md px-2 h-10"
                         placeholder={placeholder}
                         type={type}
                         name={name || ""}
@@ -50,7 +50,7 @@ function Input(props) {
                             {...props}
                             onChange={onChange}
                             placeholder={placeholder || ""}
-                            className="border border-border transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary w-full resize-none outline-none rounded-md p-2 h-40"
+                            className="border border-input-border transition-all focus:shadow-[0_0_4px_0px_var(--color-primary)] duration-500 focus:border-primary w-full resize-none outline-none rounded-md p-2 h-40"
                             name={name || ""}
                             id={id || ""}
                         ></textarea>
