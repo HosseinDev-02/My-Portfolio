@@ -17,7 +17,7 @@ function ProjectItem({ image, title, href, description, skills, github }) {
                     className="transition-all duration-500 group-hover:scale-[1.05]"
                 />
                 {/* Project OverLay */}
-                <div className="absolute overflow-y-auto inset-0 bg-background/95 transition-all duration-300 p-6 invisible opacity-0 group-hover:opacity-100 group-hover:visible flex flex-col items-start gap-4 divide-y divide-border text-sm md:text-base">
+                <div className="absolute overflow-y-auto inset-0 bg-section/95 transition-all duration-300 p-6 invisible opacity-0 group-hover:opacity-100 group-hover:visible flex flex-col items-start gap-4 divide-y divide-border text-sm md:text-base">
                     {/* Project Description */}
                     <p className="font-IransansWeb-Medium text-white leading-8 pb-4">
                         <span className="font-IransansWeb-Bold">توضیحات :</span>{" "}

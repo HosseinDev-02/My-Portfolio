@@ -59,8 +59,8 @@ export default function Home() {
                                 </div>
                                 <p className="text-base/relaxed md:text-lg lg:max-w-120 w-full mt-10">
                                     با علاقه‌مندی ویژه به طراحی و پیاده‌سازی
-                                    رابط‌های کاربری مدرن و کاربرپسند. هدف من ایجاد
-                                    وب‌سایت‌هایی سریع، بهینه و ساده برای
+                                    رابط‌های کاربری مدرن و کاربرپسند. هدف من
+                                    ایجاد وب‌سایت‌هایی سریع، بهینه و ساده برای
                                     استفاده‌ی کاربران است. من به یادگیری مداوم،
                                     حل چالش‌های جدید و ارتقای مهارت‌هام علاقه
                                     دارم و همیشه تلاش می‌کنم در هر پروژه‌ای
@@ -110,19 +110,20 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Skills */}
-                <section
-                    id="skills"
-                    className="skills mt-20 md:mt-40 px-4 md:px-0"
-                >
-                    {/* Container */}
-                    <div className="container">
-                        {/* Content */}
-                        <div>
-                            <SectionHeader title="مهارت های" />
-                            {/* Skills Content Wrapper */}
-                            <div className="">
-                                {/* Hard Skills */}
-                                {/* <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
+                <div className="">
+                    <section
+                        id="skills"
+                        className="skills py-20 md:py-40 px-4 md:px-0"
+                    >
+                        {/* Container */}
+                        <div className="container">
+                            {/* Content */}
+                            <div>
+                                <SectionHeader title="مهارت های" />
+                                {/* Skills Content Wrapper */}
+                                <div className="">
+                                    {/* Hard Skills */}
+                                    {/* <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
                                     <h6 className="font-IransansWeb-Bold text-xl">
                                         مهارت های{" "}
                                         <span className="text-primary">
@@ -130,46 +131,58 @@ export default function Home() {
                                         </span>
                                     </h6>
                                 </div> */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {/* Skill Item */}
-                                    {skills.map((skill) => (
-                                        <SkillItem key={skill.id} {...skill} />
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {/* Skill Item */}
+                                        {skills.map((skill) => (
+                                            <SkillItem
+                                                key={skill.id}
+                                                {...skill}
+                                            />
+                                        ))}
+                                    </div>
+                                    {/* Soft Skills */}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    {/* Projects */}
+                    <section
+                        id="my-projects"
+                        className="projects py-20 md:py-40 relative px-4 md:px-0"
+                    >
+                        {/* Container */}
+                        <div className="container">
+                            {/* Projects Wrapper */}
+                            <div>
+                                {/* Section Title */}
+                                <div className="flex flex-col items-center mb-12 md:mb-20 !text-lg">
+                                    <SectionHeader className={'!mb-6'} title="نمونه کار های" />
+                                    <p className="flex items-center gap-1 text-center">
+                                        <span className="text-red-500 font-IransansWeb-Bold">
+                                            توجه :
+                                        </span>
+                                        لطفا برای دیدن نمونه کار ها از وی پی ان استفاده کنید .
+                                    </p>
+                                </div>
+                                {/* Projects Content */}
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                                    {/* Project Item */}
+                                    {projects.map((project) => (
+                                        <ProjectItem
+                                            key={project.id}
+                                            {...project}
+                                        />
                                     ))}
                                 </div>
-                                {/* Soft Skills */}
                             </div>
                         </div>
-                    </div>
-                </section>
-                {/* Projects */}
-                <section
-                    id="my-projects"
-                    className="projects mt-20 md:mt-40 relative px-4 md:px-0"
-                >
-                    {/* Container */}
-                    <div className="container">
-                        {/* Projects Wrapper */}
-                        <div>
-                            {/* Section Title */}
-                            <SectionHeader title="نمونه کار های" />
-                            {/* Projects Content */}
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                                {/* Project Item */}
-                                {projects.map((project) => (
-                                    <ProjectItem
-                                        key={project.id}
-                                        {...project}
-                                    />
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                    {/* Shapes */}
-                    {/* Right-Shape */}
-                    {/* <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
-                    {/* Left Shape */}
-                    {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
-                </section>
+                        {/* Shapes */}
+                        {/* Right-Shape */}
+                        {/* <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
+                        {/* Left Shape */}
+                        {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
+                    </section>
+                </div>
                 {/* Blogs */}
                 {/* تکمیل نشده ... */}
 
@@ -178,7 +191,7 @@ export default function Home() {
                 {/* Contact Me */}
                 <section
                     id="contact-me"
-                    className="contact mt-20 md:mt-40 px-4 md:px-0 relative py-12 md:py-20"
+                    className="contact pt-20 md:pt-40 px-4 md:px-0 relative py-12 md:py-20"
                 >
                     {/* Section Title */}
                     <SectionHeader title="تماس با" />
@@ -189,7 +202,7 @@ export default function Home() {
                         objectFit="cover"
                         alt="contact-image"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/90 to-background -z-10"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-box/80 via-box/90 to-box -z-10"></div>
                     <div className="container flex items-center py-16 md:py-40">
                         {/* Section Content */}
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">

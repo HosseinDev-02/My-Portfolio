@@ -43,7 +43,7 @@ function Header() {
         <>
             <ScrollHandler />
             <header
-                className={`fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-50 bg-gradient-to-l from-background to-section md:rounded-xl transition-all duration-300 ${
+                className={`fixed left-0 md:left-12 xl:left-40 right-0 md:right-12 xl:right-40 top-0 md:top-6 lg:top-8 z-50 bg-gradient-to-l from-box to-section md:rounded-xl transition-all duration-300 ${
                     userScroll
                         ? "!top-0 !left-0 !right-0 !rounded-none shadow-[0px_0px_6px_2px_rgba(0,0,0,30%)]"
                         : ""

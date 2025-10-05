@@ -8,11 +8,11 @@ import { scrollToSection } from "@/utils";
 
 function Footer() {
     return (
-        <footer className="bg-background px-4 md:px-0">
+        <footer className="bg-section px-4 md:px-0">
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
-                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-12 md:pt-20 pb-4">
+                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-12 md:pt-20 pb-4" >
                     {/* Footer About Me */}
                     <div className="max-w-[394px] w-full">
                         <Link

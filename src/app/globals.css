@@ -14,8 +14,8 @@
   --color-background: #27272b;
   --color-caption: #EEEEEE;
   --color-primary: #537FE7;
-  --color-box: #3a3a41;
-  --color-section: #303036;
+  --color-box: #1a1a1a;
+  --color-section: #181818;
   --color-footer: #1C1C21;
   --color-border: #61616B;
 
@@ -47,7 +47,7 @@
 }
 
 body {
-  @apply bg-background text-caption font-IransansWeb overflow-x-hidden
+  @apply bg-box text-caption font-IransansWeb overflow-x-hidden
 }
 
 .container {
