@@ -157,11 +157,8 @@ export default function Home() {
                                 {/* Section Title */}
                                 <div className="flex flex-col items-center mb-12 md:mb-20 !text-lg">
                                     <SectionHeader className={'!mb-6'} title="نمونه کار های" />
-                                    <p className="">
-                                        <span className="text-red-500 font-IransansWeb-Bold">
-                                             توجه : 
-                                        </span>
-                                        لطفا برای دیدن نمونه کار ها از وی پی ان استفاده کنید .
+                                    <p className="md:text-lg text-center">
+                                        <span className="text-red-500 font-IransansWeb-Bold">توجه :</span> لطفا برای دیدن نمونه کار ها از وی پی ان استفاده کنید .
                                     </p>
                                 </div>
                                 {/* Projects Content */}
