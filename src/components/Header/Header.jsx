@@ -10,7 +10,6 @@ import { scrollToSection } from "@/utils";
 import ScrollHandler from "../ScrollHandler/ScrollHandler";
 import useActiveSection from "@/hooks/useActiveSection";
 import MenuIconDot from "../icons/MenuIconDot";
-import PhoneIcon from "../icons/PhoneIcon";
 import CrossIcon from "../icons/CrossIcon";
 import DownloadIcon from "../icons/DownloadIcon";
 

@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
 import "./globals.css";
+import ClientWrapper from "@/components/ClientWrapper";
 // import { ToastContainer } from "react-toastify";
 
 export const metadata = {
@@ -12,7 +13,7 @@ export default function RootLayout({ children }) {
         <html lang="fa" dir="rtl">
             <body className="">
                 <Header />
-                {children}
+                <ClientWrapper>{children}</ClientWrapper>
                 {/* Toast Container */}
                 {/* <ToastContainer/> */}
             </body>

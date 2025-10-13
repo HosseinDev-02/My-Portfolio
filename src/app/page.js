@@ -1,26 +1,16 @@
-import BlogItem from "@/components/BlogItem/BlogItem";
 import EmailForm from "@/components/EmailForm/EmailForm";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import Input from "@/components/Input/Input";
-import PrimaryButton from "@/components/PrimaryButton/PrimaryButton";
 import ProjectItem from "@/components/ProjectItem/ProjectItem";
 import SectionHeader from "@/components/SectionHeader/SectionHeader";
-import BlogsSection from "@/components/Sections/BlogsSection";
 import SkillItem from "@/components/SkillItem/SkillItem";
 import SocialMedia from "@/components/SocialMedia/SocialMedia";
-import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon";
-import InstagramIcon from "@/components/icons/InstagramIcon";
-import LinkedInIcon from "@/components/icons/LinkedInIcon";
-import PaperPlaneIcon from "@/components/icons/PaperPlaneIcon";
-import TelegramIcon from "@/components/icons/TelegramIcon";
-import WhatsappIcon from "@/components/icons/WhatsappIcon";
 
 import { projects, skills, socialMediaLinks } from "@/data";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
+
     console.warn("codding soft skills section");
     return (
         <div className="">
@@ -46,16 +36,6 @@ export default function Home() {
                                     <span className="font-IransansWeb-Black text-primary">
                                         توسعه دهنده فرانت اند
                                     </span>
-                                    {/* <span className="text-caption text-2xl">
-                                        سلام 🖐
-                                    </span>
-                                    <div className="text-caption">
-                                        من حسین رستمی هستم
-                                        <span className="text-2xl"> ، </span>
-                                    </div>
-                                    <div className="font-IransansWeb-Black">
-                                        توسعه دهنده فرانت اند
-                                    </div> */}
                                 </div>
                                 <p className="text-base/relaxed md:text-lg lg:max-w-120 w-full mt-10">
                                     با علاقه‌مندی ویژه به طراحی و پیاده‌سازی
@@ -65,21 +45,6 @@ export default function Home() {
                                     حل چالش‌های جدید و ارتقای مهارت‌هام علاقه
                                     دارم و همیشه تلاش می‌کنم در هر پروژه‌ای
                                     بهترین نتیجه رو ارائه بدم.
-                                    {/* توسعه دهنده فرانت اند{" "}
-                                    <span className="font-IransansWeb-Medium text-primary">
-                                        توانمند
-                                    </span>{" "}
-                                    و{" "}
-                                    <span className="font-IransansWeb-Medium text-primary">
-                                        خلاق
-                                    </span>{" "}
-                                    با انگیزه بالا برای حل چالش های فنی و بهبود
-                                    تجربه کاربری .{" "}
-                                    <span className="font-IransansWeb-Medium text-primary">
-                                        علاقه مند
-                                    </span>{" "}
-                                    به یادگیری فناوری های جدید و ایجاد رابط های
-                                    مدرن و بهینه. */}
                                 </p>
                                 {/* Social Media Links */}
                                 <div className="flex justify-center sm:justify-start items-center gap-2 mt-8">
@@ -122,15 +87,6 @@ export default function Home() {
                                 <SectionHeader title="مهارت های" />
                                 {/* Skills Content Wrapper */}
                                 <div className="">
-                                    {/* Hard Skills */}
-                                    {/* <div className="p-4 rounded-lg bg-gradient-to-l from-section to-background mb-4">
-                                    <h6 className="font-IransansWeb-Bold text-xl">
-                                        مهارت های{" "}
-                                        <span className="text-primary">
-                                            سخت
-                                        </span>
-                                    </h6>
-                                </div> */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                                         {/* Skill Item */}
                                         {skills.map((skill) => (
@@ -156,9 +112,16 @@ export default function Home() {
                             <div>
                                 {/* Section Title */}
                                 <div className="flex flex-col items-center mb-12 md:mb-20 !text-lg">
-                                    <SectionHeader className={'!mb-6'} title="نمونه کار های" />
+                                    <SectionHeader
+                                        className={"!mb-6"}
+                                        title="نمونه کار های"
+                                    />
                                     <p className="md:text-lg text-center">
-                                        <span className="text-red-500 font-IransansWeb-Bold">توجه :</span> لطفا برای دیدن نمونه کار ها از وی پی ان استفاده کنید .
+                                        <span className="text-red-500 font-IransansWeb-Bold">
+                                            توجه :
+                                        </span>{" "}
+                                        لطفا برای دیدن نمونه کار ها از وی پی ان
+                                        استفاده کنید .
                                     </p>
                                 </div>
                                 {/* Projects Content */}
@@ -173,11 +136,6 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        {/* Shapes */}
-                        {/* Right-Shape */}
-                        {/* <div className="absolute -right-1/10 top-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
-                        {/* Left Shape */}
-                        {/* <div className="absolute -left-1/10 bottom-0 w-[750px] h-[750px] bg-[#1D1D20] rounded-full -z-10 blur-2xl"></div> */}
                     </section>
                 </div>
                 {/* Blogs */}
