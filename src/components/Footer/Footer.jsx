@@ -12,7 +12,7 @@ function Footer() {
             {/* Footer Container */}
             <div className="container">
                 {/* Footer Content */}
-                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-12 md:pt-20 pb-4" >
+                <div className="flex flex-wrap justify-between gap-10 mb-4 pt-12 md:pt-20 pb-4">
                     {/* Footer About Me */}
                     <div className="max-w-[394px] w-full">
                         <Link
@@ -27,12 +27,12 @@ function Footer() {
                             {/* <LogoIcon width="72px" height="56px" /> */}
                         </Link>
                         <p className="font-IransansWeb-Medium">
-                            توسعه دهنده فرانت اند با علاقه‌مندی ویژه به طراحی و پیاده‌سازی رابط‌های
-                            کاربری مدرن و کاربرپسند. هدف من ایجاد وب‌سایت‌هایی
-                            سریع، بهینه و ساده برای استفاده‌ی کاربران است. من به
-                            یادگیری مداوم، حل چالش‌های جدید و ارتقای مهارت‌هام
-                            علاقه دارم و همیشه تلاش می‌کنم در هر پروژه‌ای بهترین
-                            نتیجه رو ارائه بدم.
+                            توسعه دهنده فرانت اند با علاقه‌مندی ویژه به طراحی و
+                            پیاده‌سازی رابط‌های کاربری مدرن و کاربرپسند. هدف من
+                            ایجاد وب‌سایت‌هایی سریع، بهینه و ساده برای استفاده‌ی
+                            کاربران است. من به یادگیری مداوم، حل چالش‌های جدید و
+                            ارتقای مهارت‌هام علاقه دارم و همیشه تلاش می‌کنم در
+                            هر پروژه‌ای بهترین نتیجه رو ارائه بدم.
                         </p>
                     </div>
                     {/* Footer Fast Links */}
@@ -95,10 +95,10 @@ function Footer() {
                                 </a>
                             </div>
                             {/* Social Medias */}
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center gap-5 mt-3">
                                 {socialMediaLinks.map((link) => (
                                     <SocialMedia
-                                        className="w-6 h-6 md:w-8 md:h-8"
+                                        className="shadow-md text-primary transition-all duration-300 hover:text-white hover:border-white rounded-full"
                                         key={link.id}
                                         {...link}
                                     />

@@ -165,9 +165,21 @@ function EmailForm() {
             </form>
             {/* My Toast Container */}
             <ToastContainer
+                className={"!right-0 md:!right-4"}
                 progressClassName={"!bg-primary"}
                 toastClassName={"!p-0 !bg-transparent"}
             />
+            <button
+                onClick={() => {
+                    displayToast(
+                        "ارسال شد !",
+                        "پیام شما با موفقیت ارسال شد .",
+                        "success"
+                    );
+                }}
+            >
+                Display Toast
+            </button>
         </div>
     );
 }

@@ -50,7 +50,7 @@ export default function Home() {
                                 <div className="flex justify-center sm:justify-start items-center gap-2 mt-8">
                                     {socialMediaLinks.map((link) => (
                                         <SocialMedia
-                                            className="shadow-md bg-box transition-all duration-300 hover:text-primary w-10 h-10 rounded"
+                                            className="shadow-md border-2 border-primary text-primary transition-all duration-300 hover:text-white hover:border-white w-10 h-10 rounded-full"
                                             key={link.id}
                                             {...link}
                                         />
@@ -60,7 +60,8 @@ export default function Home() {
                             {/* About Me Picture */}
 
                             <div className="flex items-center justify-center lg:justify-end basis-1/2">
-                                <div className="p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_4px_rgba(0,0,0,80%)]">
+                            {/* Image Wrapper Style => p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_4px_rgba(0,0,0,0.8)] */}
+                                <div className="p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_6px_rgba(83,127,231,0.8)]">
                                     <div className="w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] relative rounded-full overflow-hidden">
                                         <Image
                                             alt="hossein rostami"
@@ -162,7 +163,7 @@ export default function Home() {
                         {/* Section Content */}
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
                             {/* Contact Us Text */}
-                            <div className="col-span-5">
+                            <div className="col-span-5 self-center">
                                 <h5 className="font-IransansWeb-Bold text-xl mb-6">
                                     <span className="text-primary">
                                         آماده همکاری
@@ -174,11 +175,11 @@ export default function Home() {
                                     فقط می خواهید سلامی بفرستید خوشحال میشم
                                     ازتون دریافت کنم .
                                 </p>
-                                <div className="flex items-center gap-2 mt-8">
+                                {/* <div className="flex items-center gap-2 mt-8">
                                     {socialMediaLinks.map((link) => (
                                         <SocialMedia key={link.id} {...link} />
                                     ))}
-                                </div>
+                                </div> */}
                             </div>
                             {/* Contact Us Form */}
                             <EmailForm />
