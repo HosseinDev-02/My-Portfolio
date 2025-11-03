@@ -23,7 +23,7 @@ export default function Home() {
                 >
                     {/* Container */}
                     <div className="container">
-                        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-y-16 gap-x-10">
+                        <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-y-16 gap-x-10">
                             {/* About Me Content */}
                             <div className="px-4 md:px-0 text-center lg:text-right basis-1/2">
                                 <div className="font-IransansWeb-Bold leading-snug text-4xl md:text-5xl lg:justify-start lg:items-start gap-px lg:max-w-100 w-full">
@@ -58,20 +58,31 @@ export default function Home() {
                                 </div>
                             </div>
                             {/* About Me Picture */}
-
                             <div className="flex items-center justify-center lg:justify-end basis-1/2">
+                                <div className="p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_4px_rgba(0,0,0,0.8)]">
+                                    <div className="relative overflow-hidden rounded-full w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] ">
+                                        <Image
+                                            alt="hossein rostami"
+                                            fill
+                                            objectFit="cover"
+                                            src="/images/img-1.png"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                             {/* Image Wrapper Style => p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_4px_rgba(0,0,0,0.8)] */}
+                            {/* <div className="flex items-center justify-center lg:justify-end basis-1/2">
                                 <div className="p-1.5 border-4 border-background rounded-full shadow-[0_0_8px_6px_rgba(83,127,231,0.8)]">
                                     <div className="w-[300px] sm:w-[450px] h-[300px] sm:h-[450px] relative rounded-full overflow-hidden">
                                         <Image
                                             alt="hossein rostami"
                                             fill
                                             objectFit="cover"
-                                            src="/images/me-2.webp"
+                                            src="/images/img-1.png"
                                         />
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>
@@ -117,13 +128,6 @@ export default function Home() {
                                         className={"!mb-6"}
                                         title="نمونه کار های"
                                     />
-                                    <p className="md:text-lg text-center">
-                                        <span className="text-red-500 font-IransansWeb-Bold">
-                                            توجه :
-                                        </span>{" "}
-                                        لطفا برای دیدن نمونه کار ها از وی پی ان
-                                        استفاده کنید .
-                                    </p>
                                 </div>
                                 {/* Projects Content */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

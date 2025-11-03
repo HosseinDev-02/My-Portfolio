@@ -66,7 +66,7 @@ const projects = [
         id: 1,
         title: "داشبورد مدیریتی",
         description: `پنل مدیریتی طراحی‌شده با React و Tailwind CSS با رابط کاربری مدرن، واکنش‌گرا و کاربرپسند. شامل مدیریت داده‌ها، جداول و بخش‌های مختلف سیستم.`,
-        href: "https://hr-frestdashboard.vercel.app/",
+        href: "https://frest-dashboard.netlify.app",
         image: "/images/projects/frest-dashboard.png",
         skills: ["React Js", "Tailwind Css"],
         github: 'https://github.com/HosseinDev-02/frest-dashboard'
@@ -75,7 +75,7 @@ const projects = [
         id: 2,
         title: "سایت شرکتی",
         description: `وب‌سایت شرکتی ساخته‌شده با React و Tailwind CSS با طراحی مدرن و واکنش‌گرا، مناسب برای معرفی خدمات و نمایش اطلاعات سازمانی.`,
-        href: "https://hr-landrick.vercel.app/",
+        href: "https://hr-landrick.netlify.app",
         image: "/images/projects/landrick-index-dark-theme.png",
         skills: ["React Js", "Tailwind Css"],
         github: 'https://github.com/HosseinDev-02/landrick'
@@ -84,7 +84,7 @@ const projects = [
         id: 3,
         title: "سایت آموزشی",
         description: `وب‌سایت آموزشی در حوزه برنامه‌نویسی، توسعه‌یافته با React و Tailwind CSS. دارای طراحی مدرن، واکنش‌گرا و مناسب برای ارائه‌ی محتوای آموزشی و منابع یادگیری.`,
-        href: "https://hr-nabegheacademy.vercel.app/",
+        href: "https://hr-genius-academy.netlify.app",
         image: "/images/projects/nabeghe-academy-index-dark-theme.png",
         skills: ["React Js", "Tailwind Css"],
         github: 'https://github.com/HosseinDev-02/Programming-Learning-Site'
@@ -93,7 +93,7 @@ const projects = [
         id: 4,
         title: "سایت فروشگاهی",
         description: `وب‌سایت فروشگاهی لپ‌تاپ و لوازم جانبی، اولین پروژه بزرگ من پس از یادگیری JavaScript. توسعه‌یافته با HTML، Tailwind CSS و JavaScript با طراحی واکنش‌گرا و کاربرپسند.`,
-        href: "https://hr-digimode.vercel.app/",
+        href: "https://digimode.netlify.app",
         image: "/images/projects/digimode-index.png",
         skills: ["HTML", "Tailwind Css", "Javascript"],
         github: 'https://github.com/HosseinDev-02/Digi-Mode'
