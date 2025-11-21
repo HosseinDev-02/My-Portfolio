@@ -87,14 +87,14 @@ function Header() {
                     <PrimaryButton
                         className={"hidden md:flex"}
                         title="دانلود رزومه"
-                        href={'/hossein_rostami.pdf'}
-                        download='Hossein-Rostami-Resume.pdf'
+                        href={'/hossein_rostami-03.pdf'}
+                        download='Hossein_Rostami.pdf'
                     />
                     <PrimaryButton
                         className={"md:hidden !px-4"}
                         icon={<DownloadIcon width={24} height={24}/>}
-                        href={"/hossein_rostami.pdf"}
-                        download="Hossein-Rostami-Resume.pdf"
+                        href={"/hossein_rostami-03.pdf"}
+                        download="Hossein_Rostami.pdf"
                     />
                 </div>
             </header>
